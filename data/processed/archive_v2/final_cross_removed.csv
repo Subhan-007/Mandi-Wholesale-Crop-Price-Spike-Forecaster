@@ -1,0 +1,421 @@
+date,price,price_source,is_adjusted,is_filled,is_stale,city,crop
+2022-05-17,29250.0,Garlic (Local),0,0,0,Faisalabad,Garlic
+2022-05-21,20390.309633027522,Garlic (China),1,0,0,Faisalabad,Garlic
+2022-05-22,20390.309633027522,Garlic (China),0,1,0,Faisalabad,Garlic
+2022-05-23,20551.548165137614,Garlic (China),1,0,0,Faisalabad,Garlic
+2022-05-24,20632.167431192658,Garlic (China),1,0,0,Faisalabad,Garlic
+2022-05-25,20712.786697247706,Garlic (China),1,0,0,Faisalabad,Garlic
+2022-05-26,20793.40596330275,Garlic (China),1,0,0,Faisalabad,Garlic
+2022-05-29,20577.083333333332,Garlic (China),0,1,0,Faisalabad,Garlic
+2022-05-30,20735.416666666668,Garlic (China),1,0,0,Faisalabad,Garlic
+2022-05-31,20929.15902140673,Garlic (China),1,0,0,Faisalabad,Garlic
+2022-06-01,20893.75,Garlic (China),1,0,0,Faisalabad,Garlic
+2022-06-02,20972.916666666664,Garlic (China),1,0,0,Faisalabad,Garlic
+2022-06-03,21052.083333333332,Garlic (China),1,0,0,Faisalabad,Garlic
+2022-06-04,21247.56880733945,Garlic (China),1,0,0,Faisalabad,Garlic
+2022-06-05,21247.56880733945,Garlic (China),0,1,0,Faisalabad,Garlic
+2024-02-20,28190.949128476306,Garlic (China),1,0,0,Faisalabad,Garlic
+2024-02-21,28319.238396004705,Garlic (China),1,0,0,Faisalabad,Garlic
+2024-02-22,28169.784322365846,Garlic (China),1,0,0,Faisalabad,Garlic
+2024-02-24,27870.87617508813,Garlic (China),1,0,0,Faisalabad,Garlic
+2024-02-25,27870.87617508813,Garlic (China),0,1,0,Faisalabad,Garlic
+2024-02-26,27033.978407755585,Garlic (China),1,0,0,Faisalabad,Garlic
+2024-02-27,25951.061985898945,Garlic (China),1,0,0,Faisalabad,Garlic
+2024-02-28,25809.62739913827,Garlic (China),1,0,0,Faisalabad,Garlic
+2024-02-29,25668.192812377598,Garlic (China),1,0,0,Faisalabad,Garlic
+2024-03-01,25921.501909518214,Garlic (China),1,0,0,Faisalabad,Garlic
+2024-03-02,25777.88018997258,Garlic (China),1,0,0,Faisalabad,Garlic
+2024-03-03,25777.88018997258,Garlic (China),0,1,0,Faisalabad,Garlic
+2024-03-04,26784.577702702707,Garlic (China),1,0,0,Faisalabad,Garlic
+2024-03-05,26633.665540540544,Garlic (China),1,0,0,Faisalabad,Garlic
+2024-03-06,26354.81737171955,Garlic (China),1,0,0,Faisalabad,Garlic
+2024-04-22,54250.0,Garlic (Local),0,0,0,Faisalabad,Garlic
+2024-07-11,43250.0,Garlic (Local),0,1,0,Faisalabad,Garlic
+2024-07-12,43250.0,Garlic (Local),0,1,0,Faisalabad,Garlic
+2025-03-07,56500.0,Garlic (Local),0,0,0,Faisalabad,Garlic
+2025-03-08,57000.0,Garlic (Local),0,0,0,Faisalabad,Garlic
+2025-03-09,56500.0,Garlic (Local),0,0,0,Faisalabad,Garlic
+2025-03-10,56500.0,Garlic (Local),0,0,0,Faisalabad,Garlic
+2025-03-11,56500.0,Garlic (Local),0,0,0,Faisalabad,Garlic
+2025-03-12,56500.0,Garlic (Local),0,0,0,Faisalabad,Garlic
+2025-04-08,36500.0,Garlic (Local),0,0,0,Faisalabad,Garlic
+2025-07-24,41250.0,Garlic (Local),0,0,0,Faisalabad,Garlic
+2025-11-08,37500.0,Garlic (Local),0,0,0,Faisalabad,Garlic
+2026-01-16,29500.0,Garlic (Local),0,0,0,Faisalabad,Garlic
+2026-01-22,26138.704318936874,Garlic (China),1,0,0,Faisalabad,Garlic
+2026-01-23,28379.56810631229,Garlic (China),1,0,0,Faisalabad,Garlic
+2026-01-24,29500.0,Garlic (Local),0,0,0,Faisalabad,Garlic
+2026-01-25,29500.0,Garlic (Local),0,0,0,Faisalabad,Garlic
+2026-01-26,29500.0,Garlic (Local),0,1,0,Faisalabad,Garlic
+2026-01-27,29500.0,Garlic (Local),0,1,0,Faisalabad,Garlic
+2026-01-28,29500.0,Garlic (Local),0,0,0,Faisalabad,Garlic
+2026-01-29,28692.726231386023,Garlic (China),1,0,0,Faisalabad,Garlic
+2026-01-30,27078.178694158072,Garlic (China),1,0,0,Faisalabad,Garlic
+2023-07-25,33350.0,Garlic (Local),0,0,0,Gujranwala,Garlic
+2023-08-18,33350.0,Garlic (Local),0,0,0,Gujranwala,Garlic
+2023-08-19,33350.0,Garlic (Local),0,0,0,Gujranwala,Garlic
+2023-08-20,33350.0,Garlic (Local),0,1,0,Gujranwala,Garlic
+2025-05-16,32050.0,Garlic (Local),0,0,0,Gujranwala,Garlic
+2024-09-17,57000.0,Garlic (Local),0,0,0,Lahore,Garlic
+2024-07-26,19900.0,Garlic (Local),0,1,0,Multan,Garlic
+2024-08-04,14745.889101338433,Garlic (China),1,0,0,Multan,Garlic
+2024-08-05,14745.889101338433,Garlic (China),1,0,0,Multan,Garlic
+2024-08-06,14745.889101338433,Garlic (China),1,0,0,Multan,Garlic
+2024-08-07,14945.697896749522,Garlic (China),1,0,0,Multan,Garlic
+2024-08-08,15145.506692160612,Garlic (China),1,0,0,Multan,Garlic
+2024-08-09,15145.506692160612,Garlic (China),1,0,0,Multan,Garlic
+2024-08-10,15145.506692160612,Garlic (China),1,0,0,Multan,Garlic
+2024-08-11,15145.506692160612,Garlic (China),1,0,0,Multan,Garlic
+2024-08-12,15145.506692160612,Garlic (China),1,0,0,Multan,Garlic
+2024-08-13,15345.315487571701,Garlic (China),1,0,0,Multan,Garlic
+2024-08-14,15345.315487571701,Garlic (China),1,0,0,Multan,Garlic
+2024-08-15,15545.124282982792,Garlic (China),1,0,0,Multan,Garlic
+2024-08-16,15545.124282982792,Garlic (China),1,0,0,Multan,Garlic
+2024-08-17,15545.124282982792,Garlic (China),1,0,0,Multan,Garlic
+2024-08-18,15545.124282982792,Garlic (China),1,0,0,Multan,Garlic
+2024-08-19,15545.124282982792,Garlic (China),1,0,0,Multan,Garlic
+2024-08-20,15944.741873804971,Garlic (China),1,0,0,Multan,Garlic
+2024-08-21,15944.741873804971,Garlic (China),1,0,0,Multan,Garlic
+2024-08-22,15944.741873804971,Garlic (China),1,0,0,Multan,Garlic
+2024-08-23,15944.741873804971,Garlic (China),1,0,0,Multan,Garlic
+2024-08-24,16344.35946462715,Garlic (China),1,0,0,Multan,Garlic
+2024-08-25,16344.35946462715,Garlic (China),1,0,0,Multan,Garlic
+2024-08-26,16344.35946462715,Garlic (China),1,0,0,Multan,Garlic
+2024-08-27,16743.97705544933,Garlic (China),1,0,0,Multan,Garlic
+2024-08-28,16743.97705544933,Garlic (China),1,0,0,Multan,Garlic
+2024-08-29,16344.35946462715,Garlic (China),1,0,0,Multan,Garlic
+2024-08-30,16344.35946462715,Garlic (China),1,0,0,Multan,Garlic
+2024-08-31,16344.35946462715,Garlic (China),1,0,0,Multan,Garlic
+2024-09-01,16344.35946462715,Garlic (China),1,0,0,Multan,Garlic
+2024-09-02,16344.35946462715,Garlic (China),1,0,0,Multan,Garlic
+2024-09-03,16743.97705544933,Garlic (China),1,0,0,Multan,Garlic
+2024-09-04,16743.97705544933,Garlic (China),1,0,0,Multan,Garlic
+2024-09-05,16743.97705544933,Garlic (China),1,0,0,Multan,Garlic
+2024-09-06,17143.59464627151,Garlic (China),1,0,0,Multan,Garlic
+2024-09-07,17143.59464627151,Garlic (China),1,0,0,Multan,Garlic
+2024-09-08,17143.59464627151,Garlic (China),1,0,0,Multan,Garlic
+2024-09-09,17143.59464627151,Garlic (China),1,0,0,Multan,Garlic
+2024-09-10,17143.59464627151,Garlic (China),1,0,0,Multan,Garlic
+2024-09-11,17143.59464627151,Garlic (China),1,0,0,Multan,Garlic
+2024-09-12,18022.753346080306,Garlic (China),1,0,0,Multan,Garlic
+2024-09-13,18582.217973231356,Garlic (China),1,0,0,Multan,Garlic
+2024-09-14,18582.217973231356,Garlic (China),1,0,0,Multan,Garlic
+2024-09-15,18582.217973231356,Garlic (China),1,0,0,Multan,Garlic
+2024-09-16,18981.835564053537,Garlic (China),1,0,0,Multan,Garlic
+2024-09-17,18981.835564053537,Garlic (China),0,1,0,Multan,Garlic
+2024-09-18,19381.45315487572,Garlic (China),1,0,0,Multan,Garlic
+2024-09-19,19381.45315487572,Garlic (China),1,0,0,Multan,Garlic
+2024-09-20,19381.45315487572,Garlic (China),1,0,0,Multan,Garlic
+2024-09-21,19381.45315487572,Garlic (China),1,0,0,Multan,Garlic
+2024-09-22,19381.45315487572,Garlic (China),1,0,0,Multan,Garlic
+2024-09-23,19381.45315487572,Garlic (China),1,0,0,Multan,Garlic
+2024-09-24,19381.45315487572,Garlic (China),1,0,0,Multan,Garlic
+2024-09-25,19381.45315487572,Garlic (China),1,0,0,Multan,Garlic
+2024-09-26,19141.68260038241,Garlic (China),1,0,0,Multan,Garlic
+2024-09-27,19141.68260038241,Garlic (China),1,0,0,Multan,Garlic
+2024-09-28,19141.68260038241,Garlic (China),1,0,0,Multan,Garlic
+2024-09-29,19541.300191204587,Garlic (China),1,0,0,Multan,Garlic
+2024-09-30,19781.070745697896,Garlic (China),1,0,0,Multan,Garlic
+2024-10-01,20100.76481835564,Garlic (China),1,0,0,Multan,Garlic
+2024-10-02,20100.76481835564,Garlic (China),1,0,0,Multan,Garlic
+2024-10-03,20100.76481835564,Garlic (China),1,0,0,Multan,Garlic
+2024-10-04,19940.91778202677,Garlic (China),1,0,0,Multan,Garlic
+2024-10-05,19940.91778202677,Garlic (China),1,0,0,Multan,Garlic
+2024-10-06,19940.91778202677,Garlic (China),1,0,0,Multan,Garlic
+2024-10-07,19940.91778202677,Garlic (China),1,0,0,Multan,Garlic
+2024-10-08,19781.070745697896,Garlic (China),1,0,0,Multan,Garlic
+2024-10-09,19781.070745697896,Garlic (China),1,0,0,Multan,Garlic
+2024-10-10,19781.070745697896,Garlic (China),1,0,0,Multan,Garlic
+2024-10-11,19621.223709369024,Garlic (China),1,0,0,Multan,Garlic
+2024-10-12,18582.217973231356,Garlic (China),1,0,0,Multan,Garlic
+2024-10-13,19301.529636711282,Garlic (China),1,0,0,Multan,Garlic
+2024-10-14,19701.14722753346,Garlic (China),1,0,0,Multan,Garlic
+2024-10-15,19701.14722753346,Garlic (China),1,0,0,Multan,Garlic
+2024-10-16,19701.14722753346,Garlic (China),1,0,0,Multan,Garlic
+2024-10-17,19701.14722753346,Garlic (China),1,0,0,Multan,Garlic
+2024-10-18,19701.14722753346,Garlic (China),1,0,0,Multan,Garlic
+2024-10-19,19541.300191204587,Garlic (China),1,0,0,Multan,Garlic
+2024-10-20,19341.4913957935,Garlic (China),1,0,0,Multan,Garlic
+2024-10-21,19341.4913957935,Garlic (China),0,1,0,Multan,Garlic
+2024-10-22,20900.0,Garlic (China),1,0,0,Multan,Garlic
+2024-10-23,20900.0,Garlic (China),1,0,0,Multan,Garlic
+2024-10-24,20900.0,Garlic (China),1,0,0,Multan,Garlic
+2024-10-25,21219.694072657745,Garlic (China),1,0,0,Multan,Garlic
+2024-10-26,21619.311663479923,Garlic (China),1,0,0,Multan,Garlic
+2024-10-27,21619.311663479923,Garlic (China),1,0,0,Multan,Garlic
+2024-10-28,21779.158699808795,Garlic (China),1,0,0,Multan,Garlic
+2024-10-29,21939.005736137668,Garlic (China),1,0,0,Multan,Garlic
+2024-10-30,21219.694072657745,Garlic (China),1,0,0,Multan,Garlic
+2024-10-31,20900.0,Garlic (China),1,0,0,Multan,Garlic
+2024-11-01,20740.152963671128,Garlic (China),1,0,0,Multan,Garlic
+2024-11-02,20540.34416826004,Garlic (China),1,0,0,Multan,Garlic
+2024-11-03,20540.34416826004,Garlic (China),1,0,0,Multan,Garlic
+2024-11-04,20540.34416826004,Garlic (China),1,0,0,Multan,Garlic
+2024-11-05,20540.34416826004,Garlic (China),1,0,0,Multan,Garlic
+2024-11-06,21219.694072657745,Garlic (China),1,0,0,Multan,Garlic
+2024-11-07,21219.694072657745,Garlic (China),1,0,0,Multan,Garlic
+2024-11-08,21619.311663479923,Garlic (China),1,0,0,Multan,Garlic
+2024-11-09,21619.311663479923,Garlic (China),1,0,0,Multan,Garlic
+2024-11-10,22338.62332695985,Garlic (China),1,0,0,Multan,Garlic
+2024-11-11,23137.858508604208,Garlic (China),1,0,0,Multan,Garlic
+2024-11-12,23137.858508604208,Garlic (China),1,0,0,Multan,Garlic
+2024-11-13,23137.858508604208,Garlic (China),1,0,0,Multan,Garlic
+2024-11-14,23137.858508604208,Garlic (China),1,0,0,Multan,Garlic
+2024-11-15,23297.70554493308,Garlic (China),1,0,0,Multan,Garlic
+2024-11-16,23297.70554493308,Garlic (China),1,0,0,Multan,Garlic
+2024-11-17,23297.70554493308,Garlic (China),0,1,0,Multan,Garlic
+2024-11-18,22338.62332695985,Garlic (China),1,0,0,Multan,Garlic
+2024-11-19,23137.858508604208,Garlic (China),1,0,0,Multan,Garlic
+2024-11-20,23137.858508604208,Garlic (China),1,0,0,Multan,Garlic
+2024-11-21,23137.858508604208,Garlic (China),1,0,0,Multan,Garlic
+2024-11-22,22338.62332695985,Garlic (China),1,0,0,Multan,Garlic
+2024-11-23,23137.858508604208,Garlic (China),1,0,0,Multan,Garlic
+2024-11-24,23537.476099426385,Garlic (China),1,0,0,Multan,Garlic
+2024-11-25,23537.476099426385,Garlic (China),1,0,0,Multan,Garlic
+2024-11-26,23537.476099426385,Garlic (China),1,0,0,Multan,Garlic
+2024-11-27,23137.858508604208,Garlic (China),1,0,0,Multan,Garlic
+2024-11-28,23137.858508604208,Garlic (China),1,0,0,Multan,Garlic
+2024-11-29,23137.858508604208,Garlic (China),1,0,0,Multan,Garlic
+2024-11-30,23337.667304015296,Garlic (China),1,0,0,Multan,Garlic
+2024-12-01,23537.476099426385,Garlic (China),1,0,0,Multan,Garlic
+2024-12-02,23537.476099426385,Garlic (China),1,0,0,Multan,Garlic
+2024-12-03,23537.476099426385,Garlic (China),1,0,0,Multan,Garlic
+2024-12-04,23537.476099426385,Garlic (China),1,0,0,Multan,Garlic
+2024-12-05,23137.858508604208,Garlic (China),1,0,0,Multan,Garlic
+2024-12-06,22938.049713193115,Garlic (China),1,0,0,Multan,Garlic
+2024-12-07,22738.240917782026,Garlic (China),1,0,0,Multan,Garlic
+2024-12-08,22338.62332695985,Garlic (China),1,0,0,Multan,Garlic
+2024-12-09,22338.62332695985,Garlic (China),1,0,0,Multan,Garlic
+2024-12-10,22338.62332695985,Garlic (China),1,0,0,Multan,Garlic
+2024-12-11,22338.62332695985,Garlic (China),1,0,0,Multan,Garlic
+2024-12-12,21939.005736137668,Garlic (China),1,0,0,Multan,Garlic
+2024-12-13,21459.46462715105,Garlic (China),1,0,0,Multan,Garlic
+2024-12-14,21619.311663479923,Garlic (China),1,0,0,Multan,Garlic
+2024-12-15,21059.847036328872,Garlic (China),1,0,0,Multan,Garlic
+2024-12-16,21339.579349904398,Garlic (China),1,0,0,Multan,Garlic
+2024-12-17,21339.579349904398,Garlic (China),1,0,0,Multan,Garlic
+2024-12-18,21339.579349904398,Garlic (China),1,0,0,Multan,Garlic
+2024-12-19,21339.579349904398,Garlic (China),1,0,0,Multan,Garlic
+2024-12-20,20939.96175908222,Garlic (China),1,0,0,Multan,Garlic
+2024-12-21,20939.96175908222,Garlic (China),1,0,0,Multan,Garlic
+2024-12-22,21219.694072657745,Garlic (China),1,0,0,Multan,Garlic
+2024-12-23,21219.694072657745,Garlic (China),1,0,0,Multan,Garlic
+2024-12-24,21219.694072657745,Garlic (China),1,0,0,Multan,Garlic
+2024-12-25,21219.694072657745,Garlic (China),1,0,0,Multan,Garlic
+2024-12-26,21059.847036328872,Garlic (China),1,0,0,Multan,Garlic
+2024-12-27,20939.96175908222,Garlic (China),1,0,0,Multan,Garlic
+2024-12-28,21299.61759082218,Garlic (China),1,0,0,Multan,Garlic
+2024-12-29,21029.87571701721,Garlic (China),1,0,0,Multan,Garlic
+2024-12-30,21139.77055449331,Garlic (China),1,0,0,Multan,Garlic
+2024-12-31,21299.61759082218,Garlic (China),1,0,0,Multan,Garlic
+2025-01-01,21299.61759082218,Garlic (China),1,0,0,Multan,Garlic
+2025-01-02,21299.61759082218,Garlic (China),1,0,0,Multan,Garlic
+2025-01-03,21539.388145315486,Garlic (China),1,0,0,Multan,Garlic
+2025-01-04,21539.388145315486,Garlic (China),1,0,0,Multan,Garlic
+2025-01-05,21539.388145315486,Garlic (China),1,0,0,Multan,Garlic
+2025-01-06,21539.388145315486,Garlic (China),1,0,0,Multan,Garlic
+2025-01-07,21059.847036328872,Garlic (China),1,0,0,Multan,Garlic
+2025-01-08,21459.46462715105,Garlic (China),1,0,0,Multan,Garlic
+2025-01-09,21459.46462715105,Garlic (China),1,0,0,Multan,Garlic
+2025-01-10,21459.46462715105,Garlic (China),1,0,0,Multan,Garlic
+2025-01-11,21619.311663479923,Garlic (China),1,0,0,Multan,Garlic
+2025-01-12,21779.158699808795,Garlic (China),1,0,0,Multan,Garlic
+2025-01-13,21619.311663479923,Garlic (China),1,0,0,Multan,Garlic
+2025-01-14,21619.311663479923,Garlic (China),1,0,0,Multan,Garlic
+2025-01-15,21619.311663479923,Garlic (China),1,0,0,Multan,Garlic
+2025-01-16,22018.929254302104,Garlic (China),1,0,0,Multan,Garlic
+2025-01-17,21619.311663479923,Garlic (China),1,0,0,Multan,Garlic
+2025-01-18,21459.46462715105,Garlic (China),1,0,0,Multan,Garlic
+2025-01-19,21459.46462715105,Garlic (China),1,0,0,Multan,Garlic
+2025-01-20,21459.46462715105,Garlic (China),1,0,0,Multan,Garlic
+2025-01-21,21619.311663479923,Garlic (China),1,0,0,Multan,Garlic
+2025-01-22,21219.694072657745,Garlic (China),1,0,0,Multan,Garlic
+2025-01-23,21219.694072657745,Garlic (China),1,0,0,Multan,Garlic
+2025-01-24,21219.694072657745,Garlic (China),1,0,0,Multan,Garlic
+2025-01-25,21619.311663479923,Garlic (China),1,0,0,Multan,Garlic
+2025-01-26,21459.46462715105,Garlic (China),1,0,0,Multan,Garlic
+2025-01-27,21459.46462715105,Garlic (China),1,0,0,Multan,Garlic
+2025-01-28,21619.311663479923,Garlic (China),1,0,0,Multan,Garlic
+2025-01-29,21619.311663479923,Garlic (China),1,0,0,Multan,Garlic
+2025-01-30,21619.311663479923,Garlic (China),1,0,0,Multan,Garlic
+2025-01-31,21619.311663479923,Garlic (China),1,0,0,Multan,Garlic
+2025-02-01,21619.311663479923,Garlic (China),1,0,0,Multan,Garlic
+2025-02-02,21939.005736137668,Garlic (China),1,0,0,Multan,Garlic
+2025-02-03,21939.005736137668,Garlic (China),1,0,0,Multan,Garlic
+2025-02-04,22338.62332695985,Garlic (China),1,0,0,Multan,Garlic
+2025-02-05,21939.005736137668,Garlic (China),1,0,0,Multan,Garlic
+2025-02-06,21939.005736137668,Garlic (China),1,0,0,Multan,Garlic
+2025-02-07,21939.005736137668,Garlic (China),1,0,0,Multan,Garlic
+2025-02-08,21939.005736137668,Garlic (China),1,0,0,Multan,Garlic
+2025-02-09,21539.388145315486,Garlic (China),1,0,0,Multan,Garlic
+2025-02-10,21539.388145315486,Garlic (China),1,0,0,Multan,Garlic
+2025-02-11,21939.005736137668,Garlic (China),1,0,0,Multan,Garlic
+2025-02-12,21939.005736137668,Garlic (China),1,0,0,Multan,Garlic
+2025-02-13,22138.814531548756,Garlic (China),1,0,0,Multan,Garlic
+2025-02-14,22138.814531548756,Garlic (China),1,0,0,Multan,Garlic
+2025-02-15,22138.814531548756,Garlic (China),1,0,0,Multan,Garlic
+2025-02-16,22138.814531548756,Garlic (China),1,0,0,Multan,Garlic
+2025-02-17,21939.005736137668,Garlic (China),1,0,0,Multan,Garlic
+2025-02-18,21939.005736137668,Garlic (China),1,0,0,Multan,Garlic
+2025-02-19,22138.814531548756,Garlic (China),1,0,0,Multan,Garlic
+2025-02-20,21939.005736137668,Garlic (China),1,0,0,Multan,Garlic
+2025-02-21,22138.814531548756,Garlic (China),1,0,0,Multan,Garlic
+2025-02-22,22338.62332695985,Garlic (China),1,0,0,Multan,Garlic
+2025-02-23,21539.388145315486,Garlic (China),1,0,0,Multan,Garlic
+2025-02-24,21379.541108986617,Garlic (China),1,0,0,Multan,Garlic
+2025-02-25,21059.847036328872,Garlic (China),1,0,0,Multan,Garlic
+2025-02-26,21219.694072657745,Garlic (China),1,0,0,Multan,Garlic
+2025-02-27,21379.541108986617,Garlic (China),1,0,1,Multan,Garlic
+2025-02-28,21379.541108986617,Garlic (China),1,0,1,Multan,Garlic
+2025-03-01,21379.541108986617,Garlic (China),1,0,1,Multan,Garlic
+2025-03-02,21379.541108986617,Garlic (China),1,0,1,Multan,Garlic
+2025-03-03,21379.541108986617,Garlic (China),1,0,1,Multan,Garlic
+2025-03-04,21379.541108986617,Garlic (China),1,0,1,Multan,Garlic
+2025-03-05,21379.541108986617,Garlic (China),1,0,1,Multan,Garlic
+2025-03-06,21379.541108986617,Garlic (China),1,0,1,Multan,Garlic
+2025-03-07,21379.541108986617,Garlic (China),1,0,1,Multan,Garlic
+2025-03-08,21379.541108986617,Garlic (China),1,0,1,Multan,Garlic
+2025-03-09,21379.541108986617,Garlic (China),1,0,1,Multan,Garlic
+2025-03-10,21219.694072657745,Garlic (China),1,0,0,Multan,Garlic
+2025-03-11,21219.694072657745,Garlic (China),1,0,0,Multan,Garlic
+2025-03-12,20900.0,Garlic (China),1,0,0,Multan,Garlic
+2025-03-13,50700.0,Garlic (Local),0,0,1,Rawalpindi,Garlic
+2025-03-14,50700.0,Garlic (Local),0,0,1,Rawalpindi,Garlic
+2023-06-10,3750.0,Green Chilli,0,0,0,Faisalabad,Green Chilli
+2023-06-11,3750.0,Green Chilli,0,1,0,Faisalabad,Green Chilli
+2023-06-12,3750.0,Green Chilli,0,1,0,Faisalabad,Green Chilli
+2024-03-21,10500.0,Green Chilli,0,0,0,Faisalabad,Green Chilli
+2024-03-22,9250.0,Green Chilli,0,0,0,Faisalabad,Green Chilli
+2024-08-05,18500.0,Green Chilli,0,0,0,Faisalabad,Green Chilli
+2022-07-28,23400.0,Green Chilli,0,0,0,Gujranwala,Green Chilli
+2022-04-15,9800.0,Green Chilli,0,1,0,Lahore,Green Chilli
+2022-05-14,8850.0,Green Chilli,0,0,0,Lahore,Green Chilli
+2022-05-15,8850.0,Green Chilli,0,1,0,Lahore,Green Chilli
+2022-05-16,7850.0,Green Chilli,0,0,0,Lahore,Green Chilli
+2022-11-25,17650.0,Green Chilli,0,1,0,Lahore,Green Chilli
+2022-11-29,14650.0,Green Chilli,0,0,0,Lahore,Green Chilli
+2022-11-30,14500.0,Green Chilli,0,0,0,Lahore,Green Chilli
+2022-12-01,14500.0,Green Chilli,0,1,0,Lahore,Green Chilli
+2022-12-02,14500.0,Green Chilli,0,1,0,Lahore,Green Chilli
+2023-01-08,9250.0,Green Chilli,0,1,0,Lahore,Green Chilli
+2023-04-02,9750.0,Green Chilli,0,0,0,Lahore,Green Chilli
+2023-08-12,10250.0,Green Chilli,0,0,0,Lahore,Green Chilli
+2023-08-13,10250.0,Green Chilli,0,1,0,Lahore,Green Chilli
+2023-08-14,10250.0,Green Chilli,0,1,0,Lahore,Green Chilli
+2024-05-13,11250.0,Green Chilli,0,0,0,Lahore,Green Chilli
+2024-05-14,10250.0,Green Chilli,0,0,0,Lahore,Green Chilli
+2024-05-15,10250.0,Green Chilli,0,1,0,Lahore,Green Chilli
+2024-09-22,15250.0,Green Chilli,0,0,0,Lahore,Green Chilli
+2024-09-23,15250.0,Green Chilli,0,1,0,Lahore,Green Chilli
+2024-09-24,15250.0,Green Chilli,0,1,0,Lahore,Green Chilli
+2025-08-31,9250.0,Green Chilli,0,1,0,Lahore,Green Chilli
+2025-09-07,12100.0,Green Chilli,0,0,0,Lahore,Green Chilli
+2025-09-10,13000.0,Green Chilli,0,1,0,Lahore,Green Chilli
+2025-09-11,13000.0,Green Chilli,0,1,0,Lahore,Green Chilli
+2026-04-14,9750.0,Green Chilli,0,1,1,Lahore,Green Chilli
+2022-04-22,4900.0,Green Chilli,0,1,0,Multan,Green Chilli
+2022-04-23,4900.0,Green Chilli,0,1,0,Multan,Green Chilli
+2022-04-24,4700.0,Green Chilli,0,0,0,Multan,Green Chilli
+2022-04-25,4700.0,Green Chilli,0,1,0,Multan,Green Chilli
+2022-04-26,4700.0,Green Chilli,0,1,0,Multan,Green Chilli
+2022-05-12,3900.0,Green Chilli,0,1,0,Multan,Green Chilli
+2022-05-13,3900.0,Green Chilli,0,0,0,Multan,Green Chilli
+2022-05-14,4100.0,Green Chilli,0,0,0,Multan,Green Chilli
+2022-05-15,4100.0,Green Chilli,0,1,0,Multan,Green Chilli
+2022-09-08,12300.0,Green Chilli,0,0,0,Multan,Green Chilli
+2023-02-03,4700.0,Green Chilli,0,0,0,Multan,Green Chilli
+2023-02-04,4700.0,Green Chilli,0,0,0,Multan,Green Chilli
+2023-02-05,4700.0,Green Chilli,0,1,0,Multan,Green Chilli
+2023-04-03,4300.0,Green Chilli,0,0,0,Multan,Green Chilli
+2023-04-04,4300.0,Green Chilli,0,1,0,Multan,Green Chilli
+2023-04-05,4300.0,Green Chilli,0,1,0,Multan,Green Chilli
+2023-05-27,3500.0,Green Chilli,0,0,0,Multan,Green Chilli
+2023-05-28,3500.0,Green Chilli,0,1,0,Multan,Green Chilli
+2023-05-29,3300.0,Green Chilli,0,0,0,Multan,Green Chilli
+2023-06-04,3700.0,Green Chilli,0,1,0,Multan,Green Chilli
+2023-06-05,3900.0,Green Chilli,0,0,0,Multan,Green Chilli
+2024-04-08,7300.0,Green Chilli,0,0,0,Multan,Green Chilli
+2024-04-09,7300.0,Green Chilli,0,0,0,Multan,Green Chilli
+2024-04-10,7300.0,Green Chilli,0,1,0,Multan,Green Chilli
+2024-04-11,7300.0,Green Chilli,0,1,0,Multan,Green Chilli
+2024-05-23,3900.0,Green Chilli,0,0,0,Multan,Green Chilli
+2024-05-24,3900.0,Green Chilli,0,0,0,Multan,Green Chilli
+2024-05-25,3900.0,Green Chilli,0,1,0,Multan,Green Chilli
+2024-05-26,3900.0,Green Chilli,0,1,0,Multan,Green Chilli
+2024-05-27,5300.0,Green Chilli,0,0,0,Multan,Green Chilli
+2024-05-28,5500.0,Green Chilli,0,0,0,Multan,Green Chilli
+2026-02-03,6900.0,Green Chilli,0,0,0,Multan,Green Chilli
+2026-02-04,6900.0,Green Chilli,0,0,0,Multan,Green Chilli
+2026-02-05,6900.0,Green Chilli,0,1,0,Multan,Green Chilli
+2026-02-06,7900.0,Green Chilli,0,0,0,Multan,Green Chilli
+2026-05-13,3750.0,Green Chilli,0,0,0,Multan,Green Chilli
+2026-05-14,3750.0,Green Chilli,0,0,0,Multan,Green Chilli
+2026-07-24,5750.0,Green Chilli,0,1,0,Multan,Green Chilli
+2023-08-18,5050.0,Green Chilli,0,0,0,Rawalpindi,Green Chilli
+2023-08-19,4550.0,Green Chilli,0,0,0,Rawalpindi,Green Chilli
+2023-08-20,4550.0,Green Chilli,0,1,0,Rawalpindi,Green Chilli
+2023-08-25,5050.0,Green Chilli,0,1,0,Rawalpindi,Green Chilli
+2023-09-21,7300.0,Green Chilli,0,0,0,Rawalpindi,Green Chilli
+2023-09-22,7200.0,Green Chilli,0,0,0,Rawalpindi,Green Chilli
+2023-12-13,5450.0,Green Chilli,0,0,0,Rawalpindi,Green Chilli
+2024-08-09,5250.0,Green Chilli,0,0,0,Rawalpindi,Green Chilli
+2025-08-27,4300.0,Green Chilli,0,1,0,Rawalpindi,Green Chilli
+2022-06-25,17300.0,Onion,0,0,0,Lahore,Onion
+2022-06-26,17300.0,Onion,0,1,0,Lahore,Onion
+2022-05-26,3100.0,Onion,0,0,0,Multan,Onion
+2026-01-04,3150.0,Onion,0,0,0,Multan,Onion
+2026-05-17,3000.0,Onion,0,0,0,Multan,Onion
+2026-05-18,3000.0,Onion,0,1,0,Multan,Onion
+2026-05-19,3000.0,Onion,0,1,0,Multan,Onion
+2023-03-21,10250.0,Potato Fresh,0,0,0,Lahore,Potato
+2022-05-27,4500.0,Potato Fresh,0,0,0,Multan,Potato
+2022-05-28,4100.0,Potato Fresh,0,0,0,Multan,Potato
+2022-05-29,4100.0,Potato Fresh,0,1,0,Multan,Potato
+2022-08-13,4650.0,Potato Fresh,0,0,0,Rawalpindi,Potato
+2022-08-14,4650.0,Potato Fresh,0,1,0,Rawalpindi,Potato
+2022-08-15,4650.0,Potato Fresh,0,0,0,Rawalpindi,Potato
+2022-08-29,4850.0,Potato Fresh,0,1,0,Rawalpindi,Potato
+2026-11-01,8250.0,Tomato,0,0,0,Faisalabad,Tomato
+2022-07-14,2700.0,Tomato,0,0,0,Gujranwala,Tomato
+2025-07-23,3950.0,Tomato,0,0,0,Gujranwala,Tomato
+2023-12-27,17850.0,Tomato,0,0,0,Lahore,Tomato
+2022-01-01,2300.0,Tomato,0,0,0,Multan,Tomato
+2022-01-02,2300.0,Tomato,0,1,0,Multan,Tomato
+2022-01-12,2500.0,Tomato,0,1,0,Multan,Tomato
+2022-05-10,3500.0,Tomato,0,1,0,Multan,Tomato
+2022-05-11,3500.0,Tomato,0,1,0,Multan,Tomato
+2022-05-18,3300.0,Tomato,0,0,0,Multan,Tomato
+2023-04-17,2900.0,Tomato,0,1,0,Multan,Tomato
+2023-04-18,2900.0,Tomato,0,1,0,Multan,Tomato
+2023-04-19,2700.0,Tomato,0,0,0,Multan,Tomato
+2023-04-20,2700.0,Tomato,0,1,0,Multan,Tomato
+2023-04-21,2300.0,Tomato,0,0,0,Multan,Tomato
+2023-04-22,2300.0,Tomato,0,1,0,Multan,Tomato
+2023-05-01,1700.0,Tomato,0,0,0,Multan,Tomato
+2023-05-02,1700.0,Tomato,0,1,0,Multan,Tomato
+2023-05-03,1700.0,Tomato,0,1,0,Multan,Tomato
+2023-07-19,4800.0,Tomato,0,0,0,Multan,Tomato
+2024-03-29,4800.0,Tomato,0,0,0,Multan,Tomato
+2024-04-27,4700.0,Tomato,0,1,0,Multan,Tomato
+2024-06-15,4600.0,Tomato,0,0,0,Multan,Tomato
+2025-02-05,2900.0,Tomato,0,0,0,Multan,Tomato
+2025-02-06,2500.0,Tomato,0,0,0,Multan,Tomato
+2025-02-07,2500.0,Tomato,0,1,0,Multan,Tomato
+2025-02-08,2800.0,Tomato,0,0,0,Multan,Tomato
+2025-03-13,2750.0,Tomato,0,0,0,Multan,Tomato
+2025-03-14,2750.0,Tomato,0,1,0,Multan,Tomato
+2025-03-15,2750.0,Tomato,0,1,0,Multan,Tomato
+2025-04-11,3300.0,Tomato,0,0,0,Multan,Tomato
+2025-04-12,3500.0,Tomato,0,0,0,Multan,Tomato
+2026-03-25,11350.0,Tomato,0,0,0,Rawalpindi,Tomato
+2026-05-08,3400.0,Tomato,0,1,0,Rawalpindi,Tomato
+2022-05-27,20874.025229357798,Garlic (China),1,0,0,Faisalabad,Garlic
+2022-05-28,20577.083333333332,Garlic (China),1,0,0,Faisalabad,Garlic
+2024-07-25,19900.0,Garlic (Local),0,0,0,Multan,Garlic
+2024-07-27,19900.0,Garlic (Local),0,1,0,Multan,Garlic
+2025-09-06,12100.0,Green Chilli,0,0,0,Lahore,Green Chilli
+2025-09-08,12100.0,Green Chilli,0,0,0,Lahore,Green Chilli
+2023-04-15,2900.0,Tomato,0,0,0,Multan,Tomato
+2023-04-16,2900.0,Tomato,0,0,0,Multan,Tomato
+2024-04-26,4700.0,Tomato,0,1,0,Multan,Tomato
+2025-09-05,11250.0,Green Chilli,0,0,0,Gujranwala,Green Chilli

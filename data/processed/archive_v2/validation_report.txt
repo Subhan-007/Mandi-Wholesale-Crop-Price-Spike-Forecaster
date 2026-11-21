@@ -1,0 +1,194 @@
+##### A. STRUCTURE #####
+rows=41831 | 2022-01-01 -> 2026-11-20 | cities=5 crops=5
+columns: ['date', 'city', 'crop', 'price_source', 'price_pkr_per_100kg', 'is_filled', 'is_adjusted', 'is_stale', 'rain_mm', 'temp_max_c', 'temp_min_c', 'temp_mean_c']
+duplicate (city,crop,date): 0 | null cells: 0 | prices <= 0: 0
+
+##### B. FINAL vs RAW AMIS DATA #####
+genuine rows checked: 36303 | not found in raw: 0 | price differs from raw: 0
+forward-filled rows not equal to previous day's price: 1
+
+##### C. EXTREME PRICE CHANGES #####
+day-to-day changes > 30%: 314 | > 50%: 58  (out of 36819)
+Top 12 day-to-day changes:
+      city         crop       date  prev_price  price_pkr_per_100kg  chg1   price_source
+    Multan        Onion 2026-02-17      3700.0               7900.0 113.5          Onion
+Faisalabad Green Chilli 2023-06-15      3750.0               7800.0 108.0   Green Chilli
+Faisalabad       Garlic 2022-04-15     11750.0              23500.0 100.0 Garlic (Local)
+    Multan Green Chilli 2026-08-24      5250.0              10500.0 100.0   Green Chilli
+    Multan       Tomato 2022-08-29     11900.0              23300.0  95.8         Tomato
+Faisalabad        Onion 2025-12-03      7500.0              14000.0  86.7          Onion
+    Lahore       Garlic 2026-10-12     11150.0              20500.0  83.9 Garlic (Local)
+Faisalabad       Garlic 2026-02-07     16045.3              29500.0  83.9 Garlic (Local)
+Rawalpindi       Tomato 2024-06-15      5450.0               9950.0  82.6         Tomato
+    Lahore Green Chilli 2022-11-14     10750.0              19500.0  81.4   Green Chilli
+    Lahore       Garlic 2024-02-24     28000.0              50000.0  78.6 Garlic (Local)
+Faisalabad       Tomato 2024-06-15      5750.0              10250.0  78.3         Tomato
+
+7-day change (%) by crop:
+               count  mean   std   min    1%    5%   95%   99%    max
+crop                                                                 
+Garlic        8307.0   0.7  10.1 -55.4 -31.4 -14.2  14.8  30.6   99.1
+Green Chilli  8239.0   1.6  17.9 -60.2 -36.1 -24.9  33.9  55.3  120.0
+Onion         8611.0   2.2  17.5 -71.1 -36.0 -24.1  31.4  52.9  179.4
+Potato        7147.0   0.4  11.9 -42.1 -29.7 -19.0  18.8  38.0  133.0
+Tomato        8443.0   4.1  27.2 -67.3 -46.2 -34.3  53.7  90.2  188.2
+Top 8 7-day changes:
+      city   crop       date  price_pkr_per_100kg  price_next7  chg7
+Rawalpindi Tomato 2023-09-03               4250.0      12250.0 188.2
+Rawalpindi Tomato 2023-09-02               4250.0      12250.0 188.2
+Gujranwala  Onion 2022-08-23               8500.0      23750.0 179.4
+Rawalpindi Tomato 2022-04-25               4000.0      10900.0 172.5
+Faisalabad  Onion 2022-08-23               9250.0      24750.0 167.6
+    Multan Tomato 2022-08-22               8900.0      23300.0 161.8
+    Multan Tomato 2024-06-09               2950.0       7700.0 161.0
+Rawalpindi Tomato 2022-04-23               4250.0      10900.0 156.5
+
+##### D. SERIES SWITCHES (backup series joins) #####
+switch points: 47 | median |jump| at switch: 10.7% | typical daily |change|: 0.0%
+      city   crop       date   price_source  prev_price  price_pkr_per_100kg  chg1
+Faisalabad Garlic 2024-03-15 Garlic (Local)     28376.9              35750.0  26.0
+Faisalabad Garlic 2026-02-07 Garlic (Local)     16045.3              29500.0  83.9
+Faisalabad Potato 2023-04-29   Potato Store      6100.0               8281.5  35.8
+Faisalabad Potato 2024-11-10   Potato Store      8000.0              10152.8  26.9
+Faisalabad Potato 2026-06-20   Potato Store      2900.0               4426.3  52.6
+Faisalabad Potato 2026-07-28   Potato Fresh      4731.6               2900.0 -38.7
+Faisalabad Potato 2026-07-29   Potato Store      2900.0               4426.3  52.6
+Faisalabad Potato 2026-08-03   Potato Fresh      4731.6               2900.0 -38.7
+Faisalabad Potato 2026-08-04   Potato Store      2900.0               4833.3  66.7
+Gujranwala Garlic 2023-06-09 Garlic (Local)     24650.6              16600.0 -32.7
+mean |daily change| % for genuine (0) vs backup-adjusted (1) rows:
+adj              0     1
+crop                    
+Garlic        1.73  1.79
+Green Chilli  4.45   NaN
+Onion         3.48   NaN
+Potato        2.26  2.12
+Tomato        5.71   NaN
+
+##### E. STUCK PRICES (same value on many consecutive trading days) #####
+      city   crop  longest_run  runs>=10
+    Lahore Potato           44        17
+Gujranwala Potato           36        12
+Faisalabad Garlic           35        40
+    Multan Garlic           32        15
+Gujranwala Garlic           30        20
+Rawalpindi Potato           30        13
+rows flagged is_stale=1: 9.1% overall; by crop (%):
+crop
+Garlic          21.4
+Green Chilli     4.1
+Onion            4.7
+Potato          14.9
+Tomato           1.3
+
+##### F. CROSS-CITY CONSISTENCY (price / median of cities on the same day) #####
+city prices > 1.8x or < 0.55x the same-day median of the other cities: 0 of 40952
+median price ratio of each city to the all-city median (1.00 = typical level):
+city          Faisalabad  Gujranwala  Lahore  Multan  Rawalpindi
+crop                                                            
+Garlic              0.95        1.02    1.03    0.93        1.00
+Green Chilli        1.00        1.04    1.11    0.87        0.97
+Onion               1.00        1.00    1.04    0.88        0.97
+Potato              1.00        1.00    1.02    0.94        0.97
+Tomato              1.02        1.00    1.06    0.89        0.95
+
+##### G. MONTHLY LEVEL JUMPS (month median vs previous month, > 50%) #####
+months with |median change| > 50%: 157
+      city         crop      ym  price_pkr_per_100kg   mom
+Gujranwala       Tomato 2026-07              20750.0 226.8
+    Multan       Tomato 2026-06               6250.0 212.5
+    Lahore       Tomato 2026-07              21000.0 211.1
+    Multan       Tomato 2026-07              19000.0 204.0
+Faisalabad       Tomato 2026-07              20000.0 196.3
+Rawalpindi       Tomato 2026-07              20450.0 190.1
+Rawalpindi       Tomato 2022-02               9300.0 181.8
+    Multan       Tomato 2022-02              10900.0 179.5
+Rawalpindi Green Chilli 2022-09              24300.0 179.3
+Rawalpindi       Potato 2026-11               6825.0 173.0
+
+##### H. COVERAGE (days still missing after cleaning) #####
+        crop       city  rows  missing_days  longest_gap  last_date
+      Garlic Faisalabad  1709            76           16 2026-11-20
+      Garlic Gujranwala  1727            58           24 2026-11-20
+      Garlic     Lahore  1763            22            3 2026-11-20
+      Garlic     Multan  1542           243          221 2026-11-20
+      Garlic Rawalpindi  1764            21            3 2026-11-20
+Green Chilli Faisalabad  1758            27            4 2026-11-20
+Green Chilli Gujranwala  1729            56           24 2026-11-20
+Green Chilli     Lahore  1646           139           40 2026-11-20
+Green Chilli     Multan  1659           126           23 2026-11-20
+Green Chilli Rawalpindi  1740            45            4 2026-11-20
+       Onion Faisalabad  1766            19            3 2026-11-20
+       Onion Gujranwala  1733            52           24 2026-11-20
+       Onion     Lahore  1762            23            3 2026-11-20
+       Onion     Multan  1740            45           25 2026-11-20
+       Onion Rawalpindi  1766            19            3 2026-11-20
+      Potato Faisalabad  1762            23            6 2026-11-20
+      Potato Gujranwala  1501           284           93 2026-11-20
+      Potato     Lahore  1345           286          204 2026-06-19
+      Potato     Multan  1423           362          138 2026-11-20
+      Potato Rawalpindi  1332           453          142 2026-11-20
+      Tomato Faisalabad  1765            20            3 2026-11-20
+      Tomato Gujranwala  1730            55           24 2026-11-20
+      Tomato     Lahore  1763            22            3 2026-11-20
+      Tomato     Multan  1644           139           30 2026-11-20
+      Tomato Rawalpindi  1762            23            3 2026-11-20
+
+##### I. WEATHER SANITY #####
+rows where min/mean/max temperature are inconsistent: 0 | negative rain: 0 | max daily rain: 94 mm | temp range: 6.6 to 40.2 C
+mean temperature by month (C):
+m           1   2   3   4   5   6   7   8   9   10  11  12
+city                                                      
+Faisalabad  11  17  22  28  33  34  31  31  30  26  20  15
+Gujranwala  11  15  21  26  31  33  30  29  29  24  18  13
+Lahore      11  16  21  27  32  33  30  30  29  25  19  14
+Multan      12  17  23  29  34  35  33  32  31  27  21  15
+Rawalpindi  10  14  19  24  29  31  29  28  27  22  16  12
+average rain by month (mm per month):
+m           1   2   3   4   5   6    7    8   9   10  11  12
+city                                                        
+Faisalabad  19  19  52  28  14  40  164  103  37  20  15   2
+Gujranwala  50  41  45  33  31  47  224  162  71  37  24   4
+Lahore      37  33  38  22  23  47  218  192  82  27  11   4
+Multan       7   7  18   8   9  23  118   82  19  12   2   3
+Rawalpindi  61  46  96  69  30  62  239  205  75  35  34  11
+
+##### J. TARGET READINESS (7-day-ahead price and spike class balance) #####
+share of rows that have a price exactly 7 days later (%):
+crop
+Garlic          97.7
+Green Chilli    96.6
+Onion           98.2
+Potato          97.1
+Tomato          97.4
+train/later split date: 2025-05-29  (threshold = train mean + 1.5 x std)
+              mean    std  thr_%  later30  train70
+crop                                              
+Garlic        0.76  11.15  17.49     1.01     4.59
+Green Chilli  2.02  19.53  31.31     2.53     7.64
+Onion         1.68  18.14  28.90     6.28     6.17
+Potato        0.52  11.40  17.62     5.37     6.12
+Tomato        3.65  27.99  45.63     6.88     7.24
+spike rate by city (%, whole period):
+city          Faisalabad  Gujranwala  Lahore  Multan  Rawalpindi
+crop                                                            
+Garlic               5.9         4.2     1.4     2.4         3.5
+Green Chilli         7.0         5.5     4.0     8.3         5.7
+Onion                6.3         5.4     5.5     7.9         5.9
+Potato               6.6         6.1     5.0     6.6         5.0
+Tomato               7.4         6.5     6.3     8.0         7.4
+
+##### SUMMARY #####
+[        OK] no duplicate city/crop/date 
+[        OK] no null cells 
+[        OK] all prices > 0 
+[        OK] genuine rows match raw AMIS prices 
+[ CHECK (1)] filled rows repeat previous price 
+[CHECK (58)] day-to-day change > 50% - look at the top rows above
+[CHECK (74)] 7-day change > 100% 
+[CHECK (13)] series switch jump > 25% 
+[CHECK (238)] stuck-price runs >= 10 days 
+[        OK] cross-city price outliers 
+[CHECK (157)] monthly median jump > 50% 
+[ CHECK (5)] series with > 10% missing days - Potato in some cities is expected
+[        OK] weather values consistent 

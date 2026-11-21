@@ -1,0 +1,7 @@
+1. Most volatile crop (std of 7-day change): Tomato (27.2 %); least volatile: Garlic (10.2 %).
+2. Share of days labelled 'spike' overall: Onion 6.1%, Tomato 7.2%, Potato 5.8%, Garlic 3.5%, Green Chilli 6.2%.
+3. Seasonal peak / low month of the price index: Onion Nov/May; Tomato Nov/May; Potato Nov/Feb; Garlic Feb/May; Green Chilli Oct/May.
+4. Strongest weather link with the 7-day change: Potato vs temp_mean_c (|r| = 0.33). A noticeable relationship.
+5. Price level rises year over year (mean price by year in table above) -> percentage-change features are safer than raw price levels.
+6. 11.4% of rows are forward-filled (Sundays/short holidays) and 7.3% sit in stale runs (10+ identical prices); backup series are kept separate (column variant).
+7. Series that stop early: Potato/Lahore (ends 2026-06-19).

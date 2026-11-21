@@ -1,0 +1,50 @@
+Raw price rows: 55475
+Rows with unreadable date: 0 (dropped)
+
+Units found in raw data:
+unit_raw
+Rs./100kg    47550
+NaN           7925
+Rows with BLANK unit (AMIS leaves it empty for: ['Green Chilli']) -> assumed Rs./100kg because their price level matches the other crops: 7925
+
+Missing or non-positive prices removed: 10755
+Exact duplicate rows removed: 0
+Rows merged because the same day had conflicting prices: 0
+
+Outliers removed: 523 = 32 against the series' own level + 491 city-specific glitches vs the other cities (listed in outliers_removed.csv)
+Final cross-city check removed 420 rows (incl. backup-filled days): final_cross_removed.csv
+Days filled from a BACKUP series (scaled to the primary): 1184
+Gap days filled with the previous price (<= 2 days): 4666
+Days still missing after filling (longer gaps, left out of the dataset): 2220
+
+Price rows without weather (dates outside the weather range): 0 (dropped)
+
+FINAL: 41831 rows, 5 cities, 5 crops -> C:\Mandi Phase1_v2\data\processed\mandi_dataset.csv
+
+                         rows      first       last  filled_pct  backup_pct  stale_pct  median_price
+crop         city                                                                                   
+Garlic       Faisalabad  1709 2022-01-01 2026-11-20        10.8         2.7       42.6       19500.0
+             Gujranwala  1727 2022-01-01 2026-11-20        15.2         6.4       19.3       21250.0
+             Lahore      1763 2022-01-01 2026-11-20         9.3         0.0       18.4       20500.0
+             Multan      1542 2022-01-01 2026-11-20        10.8         8.5       14.5       17900.0
+             Rawalpindi  1764 2022-01-01 2026-11-20         9.0         0.2       11.7       19800.0
+Green Chilli Faisalabad  1758 2022-01-01 2026-11-20        11.1         0.0        8.1        8750.0
+             Gujranwala  1729 2022-01-01 2026-11-20        15.2         0.0        2.9        9300.0
+             Lahore      1646 2022-01-01 2026-11-20         9.8         0.0        7.7       10750.0
+             Multan      1659 2022-01-01 2026-11-20        10.1         0.0        0.0        7900.0
+             Rawalpindi  1740 2022-01-01 2026-11-20         9.7         0.0        1.9        8850.0
+Onion        Faisalabad  1766 2022-01-01 2026-11-20        10.5         0.0        1.8        7500.0
+             Gujranwala  1733 2022-01-01 2026-11-20        14.5         0.0        6.9        7750.0
+             Lahore      1762 2022-01-01 2026-11-20         9.1         0.0        8.0        7950.0
+             Multan      1740 2022-01-01 2026-11-20         9.6         0.0        2.5        6750.0
+             Rawalpindi  1766 2022-01-01 2026-11-20         9.0         0.0        4.5        7100.0
+Potato       Faisalabad  1762 2022-01-01 2026-11-20        10.8        24.8       14.3        5250.0
+             Gujranwala  1501 2022-01-01 2026-11-20        15.9         6.2       15.9        5000.0
+             Lahore      1345 2022-01-01 2026-06-19        10.3         0.0       23.7        4800.0
+             Multan      1423 2022-01-01 2026-11-20         9.3         8.1        5.4        4500.0
+             Rawalpindi  1332 2022-01-01 2026-11-20        10.4         0.0       16.0        4300.0
+Tomato       Faisalabad  1765 2022-01-01 2026-11-20        10.9         0.0        0.7        8200.0
+             Gujranwala  1730 2022-01-01 2026-11-20        14.7         0.0        3.8        7950.0
+             Lahore      1763 2022-01-01 2026-11-20         9.1         0.0        2.0        8500.0
+             Multan      1644 2022-01-03 2026-11-20        10.1         0.0        0.0        7300.0
+             Rawalpindi  1762 2022-01-01 2026-11-20         9.1         0.0        0.0        7500.0

@@ -1,0 +1,253 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head id="Head1"><title>
+	Price_Trends"
+</title>
+    <script src="http://amis.pk/Script/jquery.min.js" type="text/javascript"></script>
+    <script src="http://amis.pk/Script/jquery-ui.min.js" type="text/javascript"></script>
+    <link href="http://amis.pk/Script//jquery-ui.css" rel="Stylesheet" type="text/css" />
+    <script type="text/javascript">
+       
+        $(function () {
+
+            $("[id$=ReportViewer1_ctl00_ctl07_ctl00]").datepicker({
+                prevText: "Previous",
+                changeMonth: true,
+                showMonthAfterYear:true,
+                showAnim: "fold",
+                changeYear: true,
+                nextText: "Next",
+                minDate: new Date('1999/10/25'),
+                maxDate: 0,
+                yearRange:"2005:",
+                buttonText: "Calendar",
+                // showOn: 'button',
+                showOn: 'both',
+                buttonImageOnly: true,
+                buttonImage: 'images/calendar.jpg'
+
+
+
+            });
+         
+             $('#ReportViewer1_ctl00_ctl07_ctl01')
+        .hide();
+             $('#ReportViewer1_ctl00_ctl07_ctl01')
+         $("[id$=ReportViewer1_ctl00_ctl09_ctl00]").datepicker({
+             changeMonth: true,
+             buttonText: "Calendar",
+             prevText: "Previous",
+             changeMonth: true,
+             showMonthAfterYear: true,
+             showAnim: "fold",
+             changeYear: true,
+             nextText: "Next",
+             minDate: new Date('1999/10/25'),
+             maxDate: 0,
+             yearRange: "2005:",
+             buttonText: "Calendar",
+             // showOn: 'button',
+             showOn: 'both',
+                buttonImageOnly: true,
+                buttonImage: 'images/calendar.jpg'
+            });
+           
+             $('#ReportViewer1_ctl00_ctl09_ctl01')
+        .hide();
+
+        
+        });
+        </script>
+        <style type="text/css">
+            
+     
+.ui-datepicker-calendar tr, .ui-datepicker-calendar td, .ui-datepicker-calendar td a, .ui-datepicker-calendar th{font-size:inherit;}
+div.ui-datepicker{font-size:12px;width:inherit;height:inherit;}
+.ui-datepicker-title span{font-size:12px;}
+</style>
+</head>
+<body>
+<form method="post" action="./Price Trends.aspx" id="form22">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTE0ODIyNjkyNDcPFgIeE1ZhbGlkYXRlUmVxdWVzdE1vZGUCARYCAgMPZBYCAgMPFCsABQ8WAh4OUmVuZGVyaW5nU3RhdGULKZYBTWljcm9zb2Z0LlJlcG9ydGluZy5XZWJGb3Jtcy5SZXBvcnRSZW5kZXJpbmdTdGF0ZSwgTWljcm9zb2Z0LlJlcG9ydFZpZXdlci5XZWJGb3JtcywgVmVyc2lvbj0xNS4wLjAuMCwgQ3VsdHVyZT1uZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj04OTg0NWRjZDgwODBjYzkxAGQoKVhTeXN0ZW0uR3VpZCwgbXNjb3JsaWIsIFZlcnNpb249NC4wLjAuMCwgQ3VsdHVyZT1uZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj1iNzdhNWM1NjE5MzRlMDg5JGQxNDc0MWMxLWQ1MTItNDZmNy05NzVhLWE0ZjdjODc4ZjY3OQIBFCsAATwrAAQBAGZkFgICAg9kFgJmD2QWAmYPZBYMAgYPDxYKHgpGb250X05hbWVzFQEHVmVyZGFuYR4JRm9udF9TaXplKCoiU3lzdGVtLldlYi5VSS5XZWJDb250cm9scy5Gb250VW5pdAM4cHQeC0hhc0NvbnRyb2xzZx4EXyFTQgKADB4HVmlzaWJsZWhkFggCAw9kFgICAQ8QZGQWAQIWZAIFD2QWAgIBDxBkZBYBAgFkAgcPZBYGAgEPDxYCHgRUZXh0BQowMS8wMS8yMDI0ZGQCAw8PFgQeCENzc0NsYXNzBSpjaHJvbWVsZXNzLWJ1dHRvbiBnbHlwaHVpIGdseXBodWktY2FsZW5kYXIfBQICZGQCBA8WCB4ETmFtZQUfUmVwb3J0Vmlld2VyMV9jdGwwOF9jdGwwN19jdGwwMh4Gb25sb2FkBbIBDQp0aGlzLnJlc3VsdGZpZWxkPSRnZXQoJ1JlcG9ydFZpZXdlcjFfY3RsMDhfY3RsMDdfdHh0VmFsdWUnKTsNCnRoaXMucmVzdWx0ZnVuYz1mdW5jdGlvbihyZXN1bHRGaWVsZCl7JGdldCgnUmVwb3J0Vmlld2VyMV9jdGwwOF9jdGwwNycpLmNvbnRyb2wuT25DYWxlbmRhclNlbGVjdGlvbihyZXN1bHRGaWVsZCk7fR4Jc2Nyb2xsaW5nBQJubx4Dc3JjBUovUmVzZXJ2ZWQuUmVwb3J0Vmlld2VyV2ViQ29udHJvbC5heGQ/T3BUeXBlPUNhbGVuZGFyJkxDSUQ9MTAzMyZzZWxlY3REYXRlPWQCCQ9kFgYCAQ8PFgIfBwUKMzEvMDEvMjAyNGRkAgMPDxYEHwgFKmNocm9tZWxlc3MtYnV0dG9uIGdseXBodWkgZ2x5cGh1aS1jYWxlbmRhch8FAgJkZAIEDxYIHwkFH1JlcG9ydFZpZXdlcjFfY3RsMDhfY3RsMDlfY3RsMDIfCgWyAQ0KdGhpcy5yZXN1bHRmaWVsZD0kZ2V0KCdSZXBvcnRWaWV3ZXIxX2N0bDA4X2N0bDA5X3R4dFZhbHVlJyk7DQp0aGlzLnJlc3VsdGZ1bmM9ZnVuY3Rpb24ocmVzdWx0RmllbGQpeyRnZXQoJ1JlcG9ydFZpZXdlcjFfY3RsMDhfY3RsMDknKS5jb250cm9sLk9uQ2FsZW5kYXJTZWxlY3Rpb24ocmVzdWx0RmllbGQpO30fCwUCbm8fDAVKL1Jlc2VydmVkLlJlcG9ydFZpZXdlcldlYkNvbnRyb2wuYXhkP09wVHlwZT1DYWxlbmRhciZMQ0lEPTEwMzMmc2VsZWN0RGF0ZT1kAgcPZBYCAgIPFgIeBVZhbHVlBQVmYWxzZWQCCA8PFgIfBmhkZAIKD2QWAgICDxYCHw0FBWZhbHNlZAILD2QWAmYPZBYCZg9kFgRmDw9kFgIeBXN0eWxlBRB2aXNpYmlsaXR5Om5vbmU7ZAIDD2QWBAIBDxYCHgdFbmFibGVkaGQCBA8WAh8NBQMxMDBkAhAPZBYCAgEPFgIfDQUFRmFsc2VkGAEFHl9fQ29udHJvbHNSZXF1aXJlUG9zdEJhY2tLZXlfXxYCBR1SZXBvcnRWaWV3ZXIxJFRvZ2dsZVBhcmFtJGltZwUXUmVwb3J0Vmlld2VyMSRjdGwxMSRpbWeYQ2LU3kPmduJ0EHSdvLoFMo7FIQ==" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['form22'];
+if (!theForm) {
+    theForm = document.form22;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="/WebResource.axd?d=5d5KGRMAyLvBqg6D0Z6Xhj3Bik0iH8Qt5h7ZqLwbqRWMcG_QNGx9uHHYTzhIEQhPxWH_P8u88WPt72kX0&amp;t=639256577503738887" type="text/javascript"></script>
+
+
+<script src="/Reserved.ReportViewerWebControl.axd?OpType=Resource&amp;Version=15.0.1404.0&amp;Name=Microsoft.Reporting.WebForms.Scripts.jquery.min.js" type="text/javascript"></script>
+<script src="/Reserved.ReportViewerWebControl.axd?OpType=Resource&amp;Version=15.0.1404.0&amp;Name=Microsoft.Reporting.WebForms.Scripts.knockoutjs.js" type="text/javascript"></script>
+<script src="/Reserved.ReportViewerWebControl.axd?OpType=Resource&amp;Version=15.0.1404.0&amp;Name=Microsoft.Reporting.WebForms.Scripts.Html5Renderer.js" type="text/javascript"></script>
+<script src="/Reserved.ReportViewerWebControl.axd?OpType=Resource&amp;Version=15.0.1404.0&amp;Name=Microsoft.Reporting.WebForms.Scripts.RSTelemetry.js" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+    var RS;
+    var RSTelemetry;
+
+    if (RS && RS.Telemetry) {
+        try {
+            RSTelemetry = new RS.Telemetry({"Host":"Microsoft.ReportViewer.WebForms","Build":"15.0.1404.0","HashedUserId":"E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855","HashedAppSite":"8EB2860128420A7B5DD90E7A6D4CE284C2E8BE5940FD7F508B0A532D91CAFD3F","HashedAppPath":"CFE3662D868B25B14286E306FD5B79DAAF99E00439D8C44756B721AD81CBA59A"});
+        } catch (exception) {
+            console.log(exception);
+        }
+    }
+    if (RS && RS.Telemetry) {
+        try {
+            RSTelemetry.trackPageView({"HashedRvcId":"54D4B73C3CA3BE4782E1F9441A14199AE3E9076CC55F7FAB134EE2F60ECA4CC1","ProcessingMode":"Remote","RSBuild":"2009.100.1617.00","HashedInstanceId":"C03BBA4AF7E27433EEF612A209D5F09E5580E6F8A00B0814486C769C7885B432","HashedReportPath":"5EBE5A5892EDF30E99962A2487A1A9551F87D2CFE8FD6CB736560C36222EF6BA"});
+        } catch (exception) {
+            console.log(exception);
+        }
+    }
+//]]>
+</script>
+
+<script src="Scripts/WebForms/MsAjax/MicrosoftAjax.js" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+if (typeof(Sys) === 'undefined') throw new Error('ASP.NET Ajax client-side framework failed to load.');
+//]]>
+</script>
+
+<script src="Scripts/WebForms/MsAjax/MicrosoftAjaxWebForms.js" type="text/javascript"></script>
+<script src="/Reserved.ReportViewerWebControl.axd?OpType=Resource&amp;Version=15.0.1404.0&amp;Name=ViewerScript" type="text/javascript"></script>
+<script src="Scripts/WebForms/MsAjax/MicrosoftAjaxTimer.js" type="text/javascript"></script>
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="7483E84F" />
+</div>
+<div>
+    <script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('ScriptManager1', 'form22', ['fReportViewer1$ReportViewer','','fReportViewer1$DocMap','','fReportViewer1$ctl13$ReportArea',''], [], ['ReportViewer1$ctl13$ReportControl$ctl00',''], 90, '');
+//]]>
+</script>
+
+    <style>@font-face{font-family:"reportingservicesglyphs-regular";src:url("/Reserved.ReportViewerWebControl.axd?OpType=Resource&Version=15.0.1404.0&Name=Microsoft.Reporting.WebForms.Fonts.ReportingServicesGlyphs.eot");src:url("/Reserved.ReportViewerWebControl.axd?OpType=Resource&Version=15.0.1404.0&Name=Microsoft.Reporting.WebForms.Fonts.ReportingServicesGlyphs.eot?#iefix") format("embedded-opentype"),url("/Reserved.ReportViewerWebControl.axd?OpType=Resource&Version=15.0.1404.0&Name=Microsoft.Reporting.WebForms.Fonts.ReportingServicesGlyphs.woff") format("woff"),url("/Reserved.ReportViewerWebControl.axd?OpType=Resource&Version=15.0.1404.0&Name=Microsoft.Reporting.WebForms.Fonts.ReportingServicesGlyphs.ttf") format("truetype"),url("/Reserved.ReportViewerWebControl.axd?OpType=Resource&Version=15.0.1404.0&Name=Microsoft.Reporting.WebForms.Fonts.ReportingServicesGlyphssvg#PowerBIGlyphs-regular") format("svg");font-weight:400;font-style:normal;font-stretch:normal}#ReportViewer1 .glyphui{position:relative;top:2px;display:inline-block;font-family:"reportingservicesglyphs-regular";font-style:normal;font-weight:normal;line-height:1;font-size:14pt;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;}#ReportViewer1 .glyphui-calendar:before{content:"H";}#ReportViewer1 .glyphui-powerbi:before{content:"E";}#ReportViewer1 .glyphui-refresh:before{content:"F";}#ReportViewer1 .glyphui-back:before{content:"G";}#ReportViewer1.rsRtl .glyphui-lastpage:before,#ReportViewer1 .glyphui-firstpage:before{content:"A";}#ReportViewer1.rsRtl .glyphui-firstpage:before,#ReportViewer1 .glyphui-lastpage:before{content:"B";}#ReportViewer1.rsRtl .glyphui-nextpage:before,#ReportViewer1 .glyphui-previouspage:before{content:"C";}#ReportViewer1.rsRtl .glyphui-previouspage:before,#ReportViewer1 .glyphui-nextpage:before{content:"D";}#ReportViewer1 .glyphui-downarrow:before{content:"K";}#ReportViewer1 .glyphui-save:before{content:"J";}#ReportViewer1 .glyphui-print:before{content:"I";}#ReportViewer1 .MenuBarBkGnd div,#ReportViewer1 .MenuBarBkGnd span,#ReportViewer1 .DocMapBar{color:#000000;}#ReportViewer1 .ActiveLink:link{color:#000000;}#ReportViewer1 .ActiveLink:hover{color:#000000;}#ReportViewer1 .ActiveLink:visited{color:#000000;}#ReportViewer1 .ActiveLink:visited:hover{color:#000000;}#ReportViewer1 :focus{outline:2px dotted #000000;}#ReportViewer1 [role=document]:focus{outline-offset:-3px;}#ReportViewer1 span.glyphui{color:#000000;}#ReportViewer1 span.glyphui.glyphui-calendar.disabled{color:#7A7A7A;}#ReportViewer1 span.glyphui.glyphui-calendar.disabled:hover{color:#7A7A7A;background-color:#FFFFFF;}#ReportViewer1 .aspNetDisabled.DisabledButton span.glyphui{color:#7A7A7A;}#ReportViewer1 .MenuBarBkGnd .HoverButton{background-color:#E6E6E6;}#ReportViewer1 .chromeless-button{background:none;border:none;}#ReportViewer1 .chromeless-button :focus{outline-color:none;}#ReportViewer1 .WaitControlBackground{background-color:#FFFFFF;border-color:#DDDDDD;}#ReportViewer1 .WaitText{font-size:8pt;font-family:"Verdana";color:#000000;}#ReportViewer1 a.CancelLinkText,#ReportViewer1 a.CancelLinkText:visited{color:#000000;}#ReportViewer1 .CancelLinkText{font-size:8pt;font-family:"Verdana";}#ReportViewer1 .sk-circle .sk-child:before{background-color:#000000;}#ReportViewer1 .spinnie .dot:after{background:#000000;}#ReportViewer1 .ParametersFrame{background-color:#FFFFFF;border-color:#DDDDDD;}#ReportViewer1 .ParametersFrame span.glyphui:hover{color:#000000;background-color:#E6E6E6;}#ReportViewer1 .ParamEntryCell .glyphui.glyphui-downarrow{font-size:8pt;}#ReportViewer1 .ToolBarButtonsCell{border-color:#DDDDDD;}#ReportViewer1 .ToolBarBackground{background-color:#FFFFFF;}#ReportViewer1 .ToolbarExport.WidgetSet,#ReportViewer1 .ToolbarFind.WidgetSet,#ReportViewer1 .ToolbarZoom.WidgetSet,#ReportViewer1 .ToolbarPageNav.WidgetSet,#ReportViewer1 .ToolbarRefresh.WidgetSet,#ReportViewer1 .ToolbarPrint.WidgetSet,#ReportViewer1 .ToolbarBack.WidgetSet,#ReportViewer1 .ToolbarPowerBI.WidgetSet{border-color:#DDDDDD;}#ReportViewer1 .DisabledLink{color:#7A7A7A;}#ReportViewer1 .DisabledLink:hover{color:#7A7A7A;}#ReportViewer1 .DisabledTextBox{background-color:#FFFFFF;}#ReportViewer1 .NormalButton{font-size:8pt;font-family:"Verdana";}#ReportViewer1 .DisabledButton{font-size:8pt;font-family:"Verdana";}#ReportViewer1 .ToolbarExport .MenuBarBkGnd div{background-color:#FFFFFF;border-color:#DDDDDD;}#ReportViewer1 .ToolbarExport .MenuBarBkGnd .HoverButton{background-color:#E6E6E6;}#ReportViewer1 .ToolbarExport .glyphui-downarrow{font-size:8pt;}#ReportViewer1 .SplitterNormal,#ReportViewer1 .SplitterHover{background-color:#DDDDDD;}#ReportViewer1 .DocMapFrame,#ReportViewer1 .DocMapTitle{border-color:#DDDDDD;}#ReportViewer1 .documentMapHighlighting{background-color:#E6E6E6;color:#000000}#ReportViewer1 .DocMapContentCell a{color:#000000;}#ReportViewer1 .searchHighlighting{background-color:#FFC20D;}#ReportViewer1 .msrs-printdialog-main{font-family:"Verdana";}#ReportViewer1 .msrs-printdialog-caption,#ReportViewer1 .msrs-printdialog-list-pageorientation{font-family:"Verdana";}#ReportViewer1 .msrs-printdialog-list-pagesize{font-family:"Verdana";}#ReportViewer1 .msrs-printdialog-divbuttons{font-family:"Verdana";background-color:#BB2124;color:#FFFFFF;}#ReportViewer1 .msrs-printdialog-divhighlightbutton:hover,#ReportViewer1 .msrs-printdialog-divhighlightbutton:focus{background-color:#D31115;color:#FFFFFF;}#ReportViewer1 .msrs-printdialog-divhighlightbutton{background-color:#BB2124;border-color:#BB2124;color:#FFFFFF;}#ReportViewer1 .msrs-printdialog-divnonhightlightbutton:hover,#ReportViewer1 .msrs-printdialog-divnonhightlightbutton:focus{background-color:#E6E6E6;color:#000000;}#ReportViewer1 .msrs-printdialog-divnonhightlightbutton{background-color:#C8C8C8;border-color:#C8C8C8;color:#000000;}</style><noscript>
+	&nbsp;Your browser does not support scripts or has been configured not to allow scripts.
+</noscript><div id="ReportViewer1_ReportViewer">
+	<div class="MSRS-RVC" id="ReportViewer1" onclick="if ($get(&#39;ReportViewer1_ctl08&#39;) != null &amp;&amp; $get(&#39;ReportViewer1_ctl08&#39;).control != null) $get(&#39;ReportViewer1_ctl08&#39;).control.HideActiveDropDown();" onactivate="if ($get(&#39;ReportViewer1_ctl08&#39;) != null &amp;&amp; $get(&#39;ReportViewer1_ctl08&#39;).control != null) $get(&#39;ReportViewer1_ctl08&#39;).control.HideActiveDropDown();">
+		<div id="ReportViewer1_HttpHandlerMissingErrorMessage" style="border-color:Red;border-width:2px;border-style:Solid;padding:10px;display:none;overflow:auto;font-size:.85em;">
+			<h2>
+				Report Viewer Configuration Error
+			</h2><p>The Report Viewer Web Control HTTP Handler has not been registered in the application&#39;s web.config file.  Add &lt;add verb=&quot;*&quot; path=&quot;Reserved.ReportViewerWebControl.axd&quot; type = &quot;Microsoft.Reporting.WebForms.HttpHandler, Microsoft.ReportViewer.WebForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91&quot; /&gt; to the system.web/httpHandlers section of the web.config file, or add &lt;add name=&quot;ReportViewerWebControlHandler&quot; preCondition=&quot;integratedMode&quot; verb=&quot;*&quot; path=&quot;Reserved.ReportViewerWebControl.axd&quot; type=&quot;Microsoft.Reporting.WebForms.HttpHandler, Microsoft.ReportViewer.WebForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91&quot; /&gt; to the system.webServer/handlers section for Internet Information Services 7 or later.</p>
+		</div><div id="ReportViewer1_BrowserNotSupportedErrorMessage" style="border-color:Red;border-width:2px;border-style:Solid;padding:10px;display:none;overflow:auto;font-size:.85em;">
+			<h2>
+				Browser not supported
+			</h2><p>Report Viewer requires a standards compliant browser. Users of Internet Explorer 8 and earlier should switch to a modern browser, or if already using a modern browser target standards mode by adding the &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot; &gt; header tag to the host page.</p>
+		</div><span id="ReportViewer1_ctl03"><input type="hidden" name="ReportViewer1$ctl03$ctl00" id="ReportViewer1_ctl03_ctl00" /><input type="hidden" name="ReportViewer1$ctl03$ctl01" id="ReportViewer1_ctl03_ctl01" /></span><link href="/Reserved.ReportViewerWebControl.axd?OpType=Resource&amp;Version=15.0.1404.0&amp;Name=Microsoft.Reporting.WebForms.Styles.Htmlviewer.css" rel="stylesheet" type="text/css" /><link href="/Reserved.ReportViewerWebControl.axd?OpType=Resource&amp;Version=15.0.1404.0&amp;Name=Microsoft.Reporting.WebForms.Styles.Html5Toolbar.css" rel="stylesheet" type="text/css" /><link href="/Reserved.ReportViewerWebControl.axd?OpType=Resource&amp;Version=15.0.1404.0&amp;Name=Microsoft.Reporting.WebForms.Styles.Html5Renderer.css" rel="stylesheet" type="text/css" /><input type="hidden" name="ReportViewer1$isReportViewerInVs" id="ReportViewer1_isReportViewerInVs" /><input type="hidden" name="ReportViewer1$ctl14" id="ReportViewer1_ctl14" /><input type="hidden" name="ReportViewer1$ctl15" id="ReportViewer1_ctl15" /><div id="ReportViewer1_AsyncWait" style="background-color:White;opacity:0.7;position:absolute;display:none;filter:alpha(opacity=70);">
+
+		</div><div id="ReportViewer1_AsyncWait_Wait" class="WaitControlBackground" aria-label="Loading..." role="dialog" tabindex="-1" style="display:none;position:absolute;">
+			<table height="100%" width="100%">
+				<tr>
+					<td><div class="spinnie">    <div class="dot dot1"></div>    <div class="dot dot2"></div>    <div class="dot dot3"></div>    <div class="dot dot4"></div>    <div class="dot dot5"></div></div></td><td class="WaitInfoCell"><span class="WaitText">Loading...</span><div class="CancelLinkDiv">
+						<a class="CancelLinkText" aria-label="Cancel" role="button" href="javascript:$get(&#39;ReportViewer1_AsyncWait&#39;).control._cancelCurrentPostback();">Cancel</a>
+					</div></td>
+				</tr>
+			</table>
+		</div><input type="hidden" name="ReportViewer1$AsyncWait$HiddenCancelField" id="ReportViewer1_AsyncWait_HiddenCancelField" value="False" /><table cellpadding="0" cellspacing="0" id="ReportViewer1_fixedTable">
+			<tr id="ParametersRowReportViewer1" style="display:none;">
+				<td colspan="3"></td>
+			</tr><tr style="height:6px;font-size:2pt;display:none;">
+				<td colspan="3" class="SplitterNormal" style="padding:0px;margin:0px;text-align:center;"><div id="ReportViewer1_ToggleParam">
+					<input type="image" name="ReportViewer1$ToggleParam$img" id="ReportViewer1_ToggleParam_img" title="Hide Parameters" tabindex="1" aria-live="polite" src="/Reserved.ReportViewerWebControl.axd?OpType=Resource&amp;Version=15.0.1404.0&amp;Name=Microsoft.Reporting.WebForms.Icons.SplitterHorizCollapse.png" alt="Hide Parameters" align="middle" onclick="void(0);" style="cursor:pointer;" /><input type="hidden" name="ReportViewer1$ToggleParam$store" id="ReportViewer1_ToggleParam_store" /><input type="hidden" name="ReportViewer1$ToggleParam$collapse" id="ReportViewer1_ToggleParam_collapse" value="false" />
+				</div></td>
+			</tr><tr style="display:none;">
+
+			</tr><tr>
+				<td style="vertical-align:top;display:none;"><div>
+					<div id="ReportViewer1_DocMap">
+						<div id="ReportViewer1_ctl12" style="display:none;">
+							<input type="hidden" name="ReportViewer1$ctl12$ClientClickedId" id="ReportViewer1_ctl12_ClientClickedId" />
+						</div>
+					</div>
+				</div></td><td class="SplitterNormal" style="display:none;width:4px;padding:0px;margin:0px;height:100%;vertical-align:middle;"><div id="ReportViewer1_ctl11">
+					<input type="image" name="ReportViewer1$ctl11$img" id="ReportViewer1_ctl11_img" title="Hide Document Map" tabindex="1" aria-live="polite" src="/Reserved.ReportViewerWebControl.axd?OpType=Resource&amp;Version=15.0.1404.0&amp;Name=Microsoft.Reporting.WebForms.Icons.SplitterVertCollapse.png" alt="Hide Document Map" align="top" onclick="void(0);" style="cursor:pointer;" /><input type="hidden" name="ReportViewer1$ctl11$store" id="ReportViewer1_ctl11_store" /><input type="hidden" name="ReportViewer1$ctl11$collapse" id="ReportViewer1_ctl11_collapse" value="false" />
+				</div></td><td style="vertical-align:top;"><div id="ReportViewer1_ctl13" tabindex="1" role="document" style="position:relative;">
+					<div id="VisibleReportContentReportViewer1_ctl13" role="main" style="display:none;">
+
+					</div><div id="ReportViewer1_ctl13_ReportArea">
+						<div NewContentType="Microsoft.Reporting.WebFormsClient.ReportAreaContent.Error" ForNonReportContentArea="true" id="ReportViewer1_ctl13_VisibilityState" style="visibility:none;">
+							<input type="hidden" name="ReportViewer1$ctl13$VisibilityState$ctl00" value="Error" />
+						</div><input type="hidden" name="ReportViewer1$ctl13$ScrollPosition" id="ReportViewer1_ctl13_ScrollPosition" /><span id="ReportViewer1_ctl13_Reserved_AsyncLoadTarget"></span><div id="ReportViewer1_ctl13_ReportControl" style="display:none;">
+							<span></span><input type="hidden" name="ReportViewer1$ctl13$ReportControl$ctl02" /><input type="hidden" name="ReportViewer1$ctl13$ReportControl$ctl03" /><input type="hidden" name="ReportViewer1$ctl13$ReportControl$ctl04" id="ReportViewer1_ctl13_ReportControl_ctl04" value="100" />
+						</div><div id="ReportViewer1_ctl13_NonReportContent" style="height:100%;width:100%;">
+							<div style="font-family:Verdana;font-size:8pt;">
+								<ul>
+									<li style="display:inline;">The value provided for the report parameter &#39;Date2&#39; is not valid for its type. (rsReportParameterTypeMismatch)</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div></td>
+			</tr>
+		</table>
+	</div>
+</div>
+    </div>
+    
+
+<script type="text/javascript">
+//<![CDATA[
+Sys.Application.add_init(function() {
+    
+if ((document.compatMode && document.compatMode == 'BackCompat') ||
+    (document.compatMode && document.compatMode == 'CSS1Compat' && document.documentMode && (document.documentMode <= 8 && document.documentMode > 0))) {
+    Sys.UI.DomElement.setVisible($get('ReportViewer1_BrowserNotSupportedErrorMessage'), true);
+    Sys.UI.DomElement.setVisible($get('ReportViewer1_fixedTable'), false);    
+} else if (typeof Microsoft == 'undefined' ||
+            typeof Microsoft.Reporting == 'undefined' ||
+            typeof Microsoft.Reporting.WebFormsClient == 'undefined' ||
+            typeof Microsoft.Reporting.WebFormsClient.ReportViewer == 'undefined') {
+    Sys.UI.DomElement.setVisible($get('ReportViewer1_HttpHandlerMissingErrorMessage'), true);
+    Sys.UI.DomElement.setVisible($get('ReportViewer1_fixedTable'), false);
+}
+    $create(Microsoft.Reporting.WebFormsClient.ReportViewer, {"_internalViewerId":"ReportViewer1_ctl03","id":"ReportViewer1"}, null, null);
+});
+Sys.WebForms.PageRequestManager.getInstance()._registerDisposeScript("ReportViewer1_ReportViewer", "$find(\u0027ReportViewer1_SessionKeepAlive\u0027).dispose();");
+Sys.Application.add_init(function() {
+    $create(Microsoft.Reporting.WebFormsClient._InternalReportViewer, {"ActionParamId":"ReportViewer1_ctl03_ctl01","ActionTypeId":"ReportViewer1_ctl03_ctl00","BaseHeight":"495px","BaseWidth":"100%","BrowserModeId":"ReportViewer1_ctl15","CaptionText":"Print","DirectionCacheId":"ReportViewer1_ctl14","DocMapAreaId":"ReportViewer1_ctl12","DocMapHeaderOverflowDivId":"ReportViewer1_ctl12DocMapHeaderOverflowDiv","DocMapSplitterId":"ReportViewer1_ctl11","DocMapUpdatePanelId":"ReportViewer1_DocMap","DoneText":"Done printing.","DownloadLinkText":"Click here to view the PDF of your report.","DownloadText":"Your PDF is ready.","ExportUrlBase":"/Reserved.ReportViewerWebControl.axd?ReportSession=eepbwl2jl5irz3454kyszu55\u0026Culture=1033\u0026CultureOverrides=True\u0026UICulture=1033\u0026UICultureOverrides=True\u0026ReportStack=1\u0026ControlID=d14741c1d51246f7975aa4f7c878f679\u0026RSProxy=http%3a%2f%2f192.168.1.3%2freportserver\u0026OpType=Export\u0026FileName=Chart\u0026ContentDisposition=OnlyHtmlInline\u0026Format=","FixedTableId":"ReportViewer1_fixedTable","FooterText":"Trouble printing?","HasSizingRow":false,"LandscapeText":"Landscape","LoadingIconUrl":"/Reserved.ReportViewerWebControl.axd?OpType=Resource\u0026Version=15.0.1404.0\u0026Name=Microsoft.Reporting.WebForms.Icons.PrintDialogLoading.png","LoadingText":"Converting to PDF...","PageOrientationLabelText":"Page orientation:","PageSizeLabelText":"Page size:","PageSizeList":{"PageSizes":[{"OptionText":"Default (8.5\" x 11\")","Width":8.5,"Height":11,"Unit":"in","IsLandscape":false},{"OptionText":"Letter (8.5\" x 11\")","Width":8.5,"Height":11,"Unit":"in","IsLandscape":false},{"OptionText":"Tabloid (11\" x 17\")","Width":11,"Height":17,"Unit":"in","IsLandscape":false},{"OptionText":"Legal (8.5\" x 14\")","Width":8.5,"Height":14,"Unit":"in","IsLandscape":false},{"OptionText":"A3 (297mm x 420mm)","Width":297,"Height":420,"Unit":"mm","IsLandscape":false},{"OptionText":"A4 (210mm x 297mm)","Width":210,"Height":297,"Unit":"mm","IsLandscape":false},{"OptionText":"A5 (148mm x 210mm)","Width":148,"Height":210,"Unit":"mm","IsLandscape":false},{"OptionText":"B4 (JIS) (257mm x 364mm)","Width":257,"Height":364,"Unit":"mm","IsLandscape":false},{"OptionText":"B5 (JIS) (182mm x 257mm)","Width":182,"Height":257,"Unit":"mm","IsLandscape":false}]},"PdfDownloadUrl":"/Reserved.ReportViewerWebControl.axd?ReportSession=eepbwl2jl5irz3454kyszu55\u0026Culture=1033\u0026CultureOverrides=True\u0026UICulture=1033\u0026UICultureOverrides=True\u0026ReportStack=1\u0026ControlID=d14741c1d51246f7975aa4f7c878f679\u0026RSProxy=http%3a%2f%2f192.168.1.3%2freportserver\u0026OpType=Export\u0026FileName=Chart\u0026ContentDisposition=AlwaysAttachment\u0026Format=PDF\u0026rc:PrintOnOpen=true","PdfPreviewUrl":"/Reserved.ReportViewerWebControl.axd?ReportSession=eepbwl2jl5irz3454kyszu55\u0026Culture=1033\u0026CultureOverrides=True\u0026UICulture=1033\u0026UICultureOverrides=True\u0026ReportStack=1\u0026ControlID=d14741c1d51246f7975aa4f7c878f679\u0026RSProxy=http%3a%2f%2f192.168.1.3%2freportserver\u0026OpType=Export\u0026FileName=Chart\u0026ContentDisposition=AlwaysInline\u0026Format=PDF\u0026rc:PrintOnOpen=true","PortraitText":"Portrait","PostBackToClientScript":function(){__doPostBack('ReportViewer1$ctl03','');},"PrintText":"Print your report from the preview window below.","PromptAreaRowId":"ParametersRowReportViewer1","PromptSplitterId":"ReportViewer1_ToggleParam","ReportAreaId":"ReportViewer1_ctl13","ReportViewerId":"ReportViewer1","ServerVersion":"2009.100.1617.00","SettingText":"We\u0027ll create a printer-friendly PDF version of your report.","TopLevelUpdatePanelId":"ReportViewer1_ReportViewer"}, null, null, $get("ReportViewer1_ctl03"));
+    $create(Microsoft.Reporting.WebFormsClient._SessionKeepAlive, {"KeepAliveBody":null,"KeepAliveIntervalSeconds":428,"KeepAliveUrl":"/Reserved.ReportViewerWebControl.axd?OpType=SessionKeepAlive\u0026ControlID=d14741c1d51246f7975aa4f7c878f679\u0026RSProxy=http%3a%2f%2f192.168.1.3%2freportserver","id":"ReportViewer1_SessionKeepAlive"}, null, null);
+});
+Sys.Application.add_init(function() {
+    $create(Microsoft.Reporting.WebFormsClient._AsyncWaitControl, {"ClientCanceledId":"ReportViewer1_AsyncWait_HiddenCancelField","DisplayDelay":1000,"FixedTableId":"ReportViewer1_fixedTable","ReportAreaId":"ReportViewer1_ctl13","ReportViewerId":"ReportViewer1","SkipTimer":true,"TriggerIds":["ReportViewer1"],"WaitControlId":"ReportViewer1_AsyncWait_Wait"}, null, null, $get("ReportViewer1_AsyncWait"));
+});
+Sys.Application.add_init(function() {
+    $create(Microsoft.Reporting.WebFormsClient._Splitter, {"HoverStyle":"SplitterHover","ImageCollapse":"/Reserved.ReportViewerWebControl.axd?OpType=Resource\u0026Version=15.0.1404.0\u0026Name=Microsoft.Reporting.WebForms.Icons.SplitterHorizCollapse.png","ImageCollapseHover":"/Reserved.ReportViewerWebControl.axd?OpType=Resource\u0026Version=15.0.1404.0\u0026Name=Microsoft.Reporting.WebForms.Icons.SplitterHorizCollapseHover.png","ImageExpand":"/Reserved.ReportViewerWebControl.axd?OpType=Resource\u0026Version=15.0.1404.0\u0026Name=Microsoft.Reporting.WebForms.Icons.SplitterHorizExpand.png","ImageExpandHover":"/Reserved.ReportViewerWebControl.axd?OpType=Resource\u0026Version=15.0.1404.0\u0026Name=Microsoft.Reporting.WebForms.Icons.SplitterHorizExpandHover.png","ImageId":"ReportViewer1_ToggleParam_img","IsCollapsable":true,"NormalStyle":"SplitterNormal","Resizable":false,"StoreCollapseField":"ReportViewer1_ToggleParam_collapse","StorePositionField":"ReportViewer1_ToggleParam_store","TooltipCollapse":"Hide Parameters","TooltipExpand":"Show Parameters","Vertical":false}, null, null, $get("ReportViewer1_ToggleParam"));
+});
+Sys.Application.add_init(function() {
+    $create(Microsoft.Reporting.WebFormsClient._Splitter, {"HoverStyle":"SplitterHover","ImageCollapse":"/Reserved.ReportViewerWebControl.axd?OpType=Resource\u0026Version=15.0.1404.0\u0026Name=Microsoft.Reporting.WebForms.Icons.SplitterVertCollapse.png","ImageCollapseHover":"/Reserved.ReportViewerWebControl.axd?OpType=Resource\u0026Version=15.0.1404.0\u0026Name=Microsoft.Reporting.WebForms.Icons.SplitterVertCollapseHover.png","ImageExpand":"/Reserved.ReportViewerWebControl.axd?OpType=Resource\u0026Version=15.0.1404.0\u0026Name=Microsoft.Reporting.WebForms.Icons.SplitterVertExpand.png","ImageExpandHover":"/Reserved.ReportViewerWebControl.axd?OpType=Resource\u0026Version=15.0.1404.0\u0026Name=Microsoft.Reporting.WebForms.Icons.SplitterVertExpandHover.png","ImageId":"ReportViewer1_ctl11_img","IsCollapsable":true,"NormalStyle":"SplitterNormal","Resizable":false,"StoreCollapseField":"ReportViewer1_ctl11_collapse","StorePositionField":"ReportViewer1_ctl11_store","TooltipCollapse":"Hide Document Map","TooltipExpand":"Show Document Map","Vertical":true}, null, null, $get("ReportViewer1_ctl11"));
+});
+Sys.Application.add_init(function() {
+    $create(Microsoft.Reporting.WebFormsClient._ReportArea, {"NonReportContentId":"ReportViewer1_ctl13_NonReportContent","ReportAreaVisibilityStateId":"ReportViewer1_ctl13_VisibilityState","ReportControlId":"ReportViewer1_ctl13_ReportControl","ScrollPositionId":"ReportViewer1_ctl13_ScrollPosition","VisibleReportContentContainerId":"VisibleReportContentReportViewer1_ctl13"}, null, null, $get("ReportViewer1_ctl13"));
+});
+Sys.Application.add_init(function() {
+    $create(Microsoft.Reporting.WebFormsClient._ReportPage, {"HiddenZoomLevelId":"ReportViewer1_ctl13_ReportControl_ctl04","StyleElementId":"ReportViewer1_ctl13_ReportControl_styles"}, null, null, $get("ReportViewer1_ctl13_ReportControl"));
+});
+//]]>
+</script>
+</form>
+    </body>
+    </html>
+

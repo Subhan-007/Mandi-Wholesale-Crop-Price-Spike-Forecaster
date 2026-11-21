@@ -1,0 +1,270 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head><meta name="keywords" content="Agriculture Commodity Daily Prices in Punjab Pakistan, Grains,Vegetables,Fruit Prices,rice,wheat,sugarcane,cotton,potato,tomato,ginger,garlic,groundnut,white grain, black grain,mash,moong, masoor puls,mango,apple,grapes,banana" /><meta name="copyright" content="www.amis.pk" /><title>
+	District Level MC
+</title>
+     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6/jquery.min.js" type="text/javascript"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js" type="text/javascript"></script>
+   
+    <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="Stylesheet" type="text/css" />
+   <script type="text/javascript">
+        $(function () {
+            $("[id$=PriceDistrict_ctl00_ctl03_ctl00]").datepicker({
+               
+                changeMonth: true,
+                changeYear: true,
+                showMonthAfterYear: true,
+                yearRange: "2005:",
+                maxDate: 0,
+                showAnim: "fold",
+                showOn: 'button',
+                buttonImageOnly: true,
+                buttonImage: 'images/calendar.jpg'
+            });
+            
+        
+           
+             $('#PriceDistrict_ctl00_ctl03_ctl01')
+        .hide();
+         
+        });
+        
+        
+    </script>             
+    <style type="text/css">
+.ui-datepicker-calendar tr, .ui-datepicker-calendar td, .ui-datepicker-calendar td a, .ui-datepicker-calendar th{font-size:inherit;}
+div.ui-datepicker{font-size:12px;width:inherit;height:inherit;}
+.ui-datepicker-title span{font-size:12px;}
+</style>
+</head>
+<body>
+    <form method="post" action="./DistrictMC.aspx" id="District">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKLTI4ODE3NzI0NA8WAh4TVmFsaWRhdGVSZXF1ZXN0TW9kZQIBFgICAw9kFgICBw8UKwAFDxYCHg5SZW5kZXJpbmdTdGF0ZQsplgFNaWNyb3NvZnQuUmVwb3J0aW5nLldlYkZvcm1zLlJlcG9ydFJlbmRlcmluZ1N0YXRlLCBNaWNyb3NvZnQuUmVwb3J0Vmlld2VyLldlYkZvcm1zLCBWZXJzaW9uPTE1LjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPTg5ODQ1ZGNkODA4MGNjOTEAZCgpWFN5c3RlbS5HdWlkLCBtc2NvcmxpYiwgVmVyc2lvbj00LjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkkMWFhOTg3M2QtYzIwZC00OTkzLTlmNTMtMzVkMjI4NTYxZTE1AgEUKwABPCsABAEAZmQWAgICD2QWAmYPZBYCZg9kFgwCBg8PFggeCkZvbnRfTmFtZXMVAQdWZXJkYW5hHglGb250X1NpemUoKiJTeXN0ZW0uV2ViLlVJLldlYkNvbnRyb2xzLkZvbnRVbml0AzhwdB4LSGFzQ29udHJvbHNnHgRfIVNCAoAMZBYCAgMPZBYEAgMPDxYEHghDc3NDbGFzcwUqY2hyb21lbGVzcy1idXR0b24gZ2x5cGh1aSBnbHlwaHVpLWNhbGVuZGFyHwUCAmRkAgQPFggeBE5hbWUFH1ByaWNlRGlzdHJpY3RfY3RsMDhfY3RsMDNfY3RsMDIeBm9ubG9hZAWyAQ0KdGhpcy5yZXN1bHRmaWVsZD0kZ2V0KCdQcmljZURpc3RyaWN0X2N0bDA4X2N0bDAzX3R4dFZhbHVlJyk7DQp0aGlzLnJlc3VsdGZ1bmM9ZnVuY3Rpb24ocmVzdWx0RmllbGQpeyRnZXQoJ1ByaWNlRGlzdHJpY3RfY3RsMDhfY3RsMDMnKS5jb250cm9sLk9uQ2FsZW5kYXJTZWxlY3Rpb24ocmVzdWx0RmllbGQpO30eCXNjcm9sbGluZwUCbm8eA3NyYwVKL1Jlc2VydmVkLlJlcG9ydFZpZXdlcldlYkNvbnRyb2wuYXhkP09wVHlwZT1DYWxlbmRhciZMQ0lEPTEwMzMmc2VsZWN0RGF0ZT1kAgcPZBYCAgIPFgIeBVZhbHVlBQVmYWxzZWQCCA8PFgIeB1Zpc2libGVoZGQCCg9kFgICAg8WAh8LBQVmYWxzZWQCCw9kFgJmD2QWAmYPZBYEZg8PZBYCHgVzdHlsZQUQdmlzaWJpbGl0eTpub25lO2QCAw9kFgQCAQ8WAh4HRW5hYmxlZGhkAgQPFgIfCwUDMTAwZAIQD2QWAgIBDxYCHwsFBUZhbHNlZBgBBR5fX0NvbnRyb2xzUmVxdWlyZVBvc3RCYWNrS2V5X18WAwUqUHJpY2VEaXN0cmljdCRjdGwwOCRjdGwwMyRkZERyb3BEb3duQnV0dG9uBR1QcmljZURpc3RyaWN0JFRvZ2dsZVBhcmFtJGltZwUXUHJpY2VEaXN0cmljdCRjdGwxMSRpbWf8vBuxU+O3AkEZaIAjaXgfLOzoJg==" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['District'];
+if (!theForm) {
+    theForm = document.District;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="/WebResource.axd?d=5d5KGRMAyLvBqg6D0Z6Xhj3Bik0iH8Qt5h7ZqLwbqRWMcG_QNGx9uHHYTzhIEQhPxWH_P8u88WPt72kX0&amp;t=639256577503738887" type="text/javascript"></script>
+
+
+<script src="/Reserved.ReportViewerWebControl.axd?OpType=Resource&amp;Version=15.0.1404.0&amp;Name=Microsoft.Reporting.WebForms.Scripts.jquery.min.js" type="text/javascript"></script>
+<script src="/Reserved.ReportViewerWebControl.axd?OpType=Resource&amp;Version=15.0.1404.0&amp;Name=Microsoft.Reporting.WebForms.Scripts.knockoutjs.js" type="text/javascript"></script>
+<script src="/Reserved.ReportViewerWebControl.axd?OpType=Resource&amp;Version=15.0.1404.0&amp;Name=Microsoft.Reporting.WebForms.Scripts.Html5Renderer.js" type="text/javascript"></script>
+<script src="/Reserved.ReportViewerWebControl.axd?OpType=Resource&amp;Version=15.0.1404.0&amp;Name=Microsoft.Reporting.WebForms.Scripts.RSTelemetry.js" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+    var RS;
+    var RSTelemetry;
+
+    if (RS && RS.Telemetry) {
+        try {
+            RSTelemetry = new RS.Telemetry({"Host":"Microsoft.ReportViewer.WebForms","Build":"15.0.1404.0","HashedUserId":"E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855","HashedAppSite":"8EB2860128420A7B5DD90E7A6D4CE284C2E8BE5940FD7F508B0A532D91CAFD3F","HashedAppPath":"E94665FF3920E423FC1ED87A828E05E254BF63226C9D87DC10E62F4270D5877D"});
+        } catch (exception) {
+            console.log(exception);
+        }
+    }
+    if (RS && RS.Telemetry) {
+        try {
+            RSTelemetry.trackPageView({"HashedRvcId":"8EF2EDDCFCC4B02C16C043ECF9A3AFB2F50BD684AAA62CDE48C76561233B8C41","ProcessingMode":"Remote","RSBuild":"2009.100.1617.00","HashedInstanceId":"42A9B2BB7E3060CA14D184C8D63268C4490ECADF461DC3B028856CE605879C6F","HashedReportPath":"84F44306621526198121DB60FAD70C24BB78E83C4E4D14D2555F02B30180C94C"});
+        } catch (exception) {
+            console.log(exception);
+        }
+    }
+//]]>
+</script>
+
+<script src="../Scripts/WebForms/MsAjax/MicrosoftAjax.js" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+if (typeof(Sys) === 'undefined') throw new Error('ASP.NET Ajax client-side framework failed to load.');
+//]]>
+</script>
+
+<script src="../Scripts/WebForms/MsAjax/MicrosoftAjaxWebForms.js" type="text/javascript"></script>
+<script src="/Reserved.ReportViewerWebControl.axd?OpType=Resource&amp;Version=15.0.1404.0&amp;Name=ViewerScript" type="text/javascript"></script>
+<script src="../Scripts/WebForms/MsAjax/MicrosoftAjaxTimer.js" type="text/javascript"></script>
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="F5DBA007" />
+</div>
+    <div style="text-align: left">
+        <table style="width: 700px">
+            <tr>
+                <td>
+                    <a id="hlHome" href="../Default.aspx" style="font-weight:bold;">Home</a></td>
+                <td>
+                    <a id="hlreport" href="../Prices.aspx" style="font-weight:bold;">Prices</a></td>
+                <td>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3" style="text-align: left">
+                    <strong><span style="color: #0000cc">Prices(Rs/100Kg) of District Level Market Committees</span></strong></td>
+            </tr>
+            <tr>
+                <td>
+                </td>
+                <td>
+                </td>
+                <td>
+                </td>
+            </tr>
+        </table>
+         <script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('ScriptManager1', 'District', ['fPriceDistrict$ReportViewer','','fPriceDistrict$DocMap','','fPriceDistrict$ctl13$ReportArea',''], [], ['PriceDistrict$ctl13$ReportControl$ctl00',''], 90, '');
+//]]>
+</script>
+
+        <style>@font-face{font-family:"reportingservicesglyphs-regular";src:url("/Reserved.ReportViewerWebControl.axd?OpType=Resource&Version=15.0.1404.0&Name=Microsoft.Reporting.WebForms.Fonts.ReportingServicesGlyphs.eot");src:url("/Reserved.ReportViewerWebControl.axd?OpType=Resource&Version=15.0.1404.0&Name=Microsoft.Reporting.WebForms.Fonts.ReportingServicesGlyphs.eot?#iefix") format("embedded-opentype"),url("/Reserved.ReportViewerWebControl.axd?OpType=Resource&Version=15.0.1404.0&Name=Microsoft.Reporting.WebForms.Fonts.ReportingServicesGlyphs.woff") format("woff"),url("/Reserved.ReportViewerWebControl.axd?OpType=Resource&Version=15.0.1404.0&Name=Microsoft.Reporting.WebForms.Fonts.ReportingServicesGlyphs.ttf") format("truetype"),url("/Reserved.ReportViewerWebControl.axd?OpType=Resource&Version=15.0.1404.0&Name=Microsoft.Reporting.WebForms.Fonts.ReportingServicesGlyphssvg#PowerBIGlyphs-regular") format("svg");font-weight:400;font-style:normal;font-stretch:normal}#PriceDistrict .glyphui{position:relative;top:2px;display:inline-block;font-family:"reportingservicesglyphs-regular";font-style:normal;font-weight:normal;line-height:1;font-size:14pt;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;}#PriceDistrict .glyphui-calendar:before{content:"H";}#PriceDistrict .glyphui-powerbi:before{content:"E";}#PriceDistrict .glyphui-refresh:before{content:"F";}#PriceDistrict .glyphui-back:before{content:"G";}#PriceDistrict.rsRtl .glyphui-lastpage:before,#PriceDistrict .glyphui-firstpage:before{content:"A";}#PriceDistrict.rsRtl .glyphui-firstpage:before,#PriceDistrict .glyphui-lastpage:before{content:"B";}#PriceDistrict.rsRtl .glyphui-nextpage:before,#PriceDistrict .glyphui-previouspage:before{content:"C";}#PriceDistrict.rsRtl .glyphui-previouspage:before,#PriceDistrict .glyphui-nextpage:before{content:"D";}#PriceDistrict .glyphui-downarrow:before{content:"K";}#PriceDistrict .glyphui-save:before{content:"J";}#PriceDistrict .glyphui-print:before{content:"I";}#PriceDistrict .MenuBarBkGnd div,#PriceDistrict .MenuBarBkGnd span,#PriceDistrict .DocMapBar{color:#000000;}#PriceDistrict .ActiveLink:link{color:#000000;}#PriceDistrict .ActiveLink:hover{color:#000000;}#PriceDistrict .ActiveLink:visited{color:#000000;}#PriceDistrict .ActiveLink:visited:hover{color:#000000;}#PriceDistrict :focus{outline:2px dotted #000000;}#PriceDistrict [role=document]:focus{outline-offset:-3px;}#PriceDistrict span.glyphui{color:#000000;}#PriceDistrict span.glyphui.glyphui-calendar.disabled{color:#7A7A7A;}#PriceDistrict span.glyphui.glyphui-calendar.disabled:hover{color:#7A7A7A;background-color:#FFFFFF;}#PriceDistrict .aspNetDisabled.DisabledButton span.glyphui{color:#7A7A7A;}#PriceDistrict .MenuBarBkGnd .HoverButton{background-color:#E6E6E6;}#PriceDistrict .chromeless-button{background:none;border:none;}#PriceDistrict .chromeless-button :focus{outline-color:none;}#PriceDistrict .WaitControlBackground{background-color:#FFFFFF;border-color:#DDDDDD;}#PriceDistrict .WaitText{font-size:8pt;font-family:"Verdana";color:#000000;}#PriceDistrict a.CancelLinkText,#PriceDistrict a.CancelLinkText:visited{color:#000000;}#PriceDistrict .CancelLinkText{font-size:8pt;font-family:"Verdana";}#PriceDistrict .sk-circle .sk-child:before{background-color:#000000;}#PriceDistrict .spinnie .dot:after{background:#000000;}#PriceDistrict .ParametersFrame{background-color:#FFFFFF;border-color:#DDDDDD;}#PriceDistrict .ParametersFrame span.glyphui:hover{color:#000000;background-color:#E6E6E6;}#PriceDistrict .ParamEntryCell .glyphui.glyphui-downarrow{font-size:8pt;}#PriceDistrict .ToolBarButtonsCell{border-color:#DDDDDD;}#PriceDistrict .ToolBarBackground{background-color:#FFFFFF;}#PriceDistrict .ToolbarExport.WidgetSet,#PriceDistrict .ToolbarFind.WidgetSet,#PriceDistrict .ToolbarZoom.WidgetSet,#PriceDistrict .ToolbarPageNav.WidgetSet,#PriceDistrict .ToolbarRefresh.WidgetSet,#PriceDistrict .ToolbarPrint.WidgetSet,#PriceDistrict .ToolbarBack.WidgetSet,#PriceDistrict .ToolbarPowerBI.WidgetSet{border-color:#DDDDDD;}#PriceDistrict .DisabledLink{color:#7A7A7A;}#PriceDistrict .DisabledLink:hover{color:#7A7A7A;}#PriceDistrict .DisabledTextBox{background-color:#FFFFFF;}#PriceDistrict .NormalButton{font-size:8pt;font-family:"Verdana";}#PriceDistrict .DisabledButton{font-size:8pt;font-family:"Verdana";}#PriceDistrict .ToolbarExport .MenuBarBkGnd div{background-color:#FFFFFF;border-color:#DDDDDD;}#PriceDistrict .ToolbarExport .MenuBarBkGnd .HoverButton{background-color:#E6E6E6;}#PriceDistrict .ToolbarExport .glyphui-downarrow{font-size:8pt;}#PriceDistrict .SplitterNormal,#PriceDistrict .SplitterHover{background-color:#DDDDDD;}#PriceDistrict .DocMapFrame,#PriceDistrict .DocMapTitle{border-color:#DDDDDD;}#PriceDistrict .documentMapHighlighting{background-color:#E6E6E6;color:#000000}#PriceDistrict .DocMapContentCell a{color:#000000;}#PriceDistrict .searchHighlighting{background-color:#FFC20D;}#PriceDistrict .msrs-printdialog-main{font-family:"Verdana";}#PriceDistrict .msrs-printdialog-caption,#PriceDistrict .msrs-printdialog-list-pageorientation{font-family:"Verdana";}#PriceDistrict .msrs-printdialog-list-pagesize{font-family:"Verdana";}#PriceDistrict .msrs-printdialog-divbuttons{font-family:"Verdana";background-color:#BB2124;color:#FFFFFF;}#PriceDistrict .msrs-printdialog-divhighlightbutton:hover,#PriceDistrict .msrs-printdialog-divhighlightbutton:focus{background-color:#D31115;color:#FFFFFF;}#PriceDistrict .msrs-printdialog-divhighlightbutton{background-color:#BB2124;border-color:#BB2124;color:#FFFFFF;}#PriceDistrict .msrs-printdialog-divnonhightlightbutton:hover,#PriceDistrict .msrs-printdialog-divnonhightlightbutton:focus{background-color:#E6E6E6;color:#000000;}#PriceDistrict .msrs-printdialog-divnonhightlightbutton{background-color:#C8C8C8;border-color:#C8C8C8;color:#000000;}</style><noscript>
+	&nbsp;Your browser does not support scripts or has been configured not to allow scripts.
+</noscript><div id="PriceDistrict_ReportViewer">
+	<div class="MSRS-RVC" id="PriceDistrict" onclick="if ($get(&#39;PriceDistrict_ctl08&#39;) != null &amp;&amp; $get(&#39;PriceDistrict_ctl08&#39;).control != null) $get(&#39;PriceDistrict_ctl08&#39;).control.HideActiveDropDown();" onactivate="if ($get(&#39;PriceDistrict_ctl08&#39;) != null &amp;&amp; $get(&#39;PriceDistrict_ctl08&#39;).control != null) $get(&#39;PriceDistrict_ctl08&#39;).control.HideActiveDropDown();">
+		<div id="PriceDistrict_HttpHandlerMissingErrorMessage" style="border-color:Red;border-width:2px;border-style:Solid;padding:10px;display:none;overflow:auto;font-size:.85em;">
+			<h2>
+				Report Viewer Configuration Error
+			</h2><p>The Report Viewer Web Control HTTP Handler has not been registered in the application&#39;s web.config file.  Add &lt;add verb=&quot;*&quot; path=&quot;Reserved.ReportViewerWebControl.axd&quot; type = &quot;Microsoft.Reporting.WebForms.HttpHandler, Microsoft.ReportViewer.WebForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91&quot; /&gt; to the system.web/httpHandlers section of the web.config file, or add &lt;add name=&quot;ReportViewerWebControlHandler&quot; preCondition=&quot;integratedMode&quot; verb=&quot;*&quot; path=&quot;Reserved.ReportViewerWebControl.axd&quot; type=&quot;Microsoft.Reporting.WebForms.HttpHandler, Microsoft.ReportViewer.WebForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91&quot; /&gt; to the system.webServer/handlers section for Internet Information Services 7 or later.</p>
+		</div><div id="PriceDistrict_BrowserNotSupportedErrorMessage" style="border-color:Red;border-width:2px;border-style:Solid;padding:10px;display:none;overflow:auto;font-size:.85em;">
+			<h2>
+				Browser not supported
+			</h2><p>Report Viewer requires a standards compliant browser. Users of Internet Explorer 8 and earlier should switch to a modern browser, or if already using a modern browser target standards mode by adding the &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot; &gt; header tag to the host page.</p>
+		</div><span id="PriceDistrict_ctl03"><input type="hidden" name="PriceDistrict$ctl03$ctl00" id="PriceDistrict_ctl03_ctl00" /><input type="hidden" name="PriceDistrict$ctl03$ctl01" id="PriceDistrict_ctl03_ctl01" /></span><link href="/Reserved.ReportViewerWebControl.axd?OpType=Resource&amp;Version=15.0.1404.0&amp;Name=Microsoft.Reporting.WebForms.Styles.Htmlviewer.css" rel="stylesheet" type="text/css" /><link href="/Reserved.ReportViewerWebControl.axd?OpType=Resource&amp;Version=15.0.1404.0&amp;Name=Microsoft.Reporting.WebForms.Styles.Html5Toolbar.css" rel="stylesheet" type="text/css" /><link href="/Reserved.ReportViewerWebControl.axd?OpType=Resource&amp;Version=15.0.1404.0&amp;Name=Microsoft.Reporting.WebForms.Styles.Html5Renderer.css" rel="stylesheet" type="text/css" /><input type="hidden" name="PriceDistrict$isReportViewerInVs" id="PriceDistrict_isReportViewerInVs" /><input type="hidden" name="PriceDistrict$ctl14" id="PriceDistrict_ctl14" /><input type="hidden" name="PriceDistrict$ctl15" id="PriceDistrict_ctl15" /><div id="PriceDistrict_AsyncWait" style="background-color:White;opacity:0.7;position:absolute;display:none;filter:alpha(opacity=70);">
+
+		</div><div id="PriceDistrict_AsyncWait_Wait" class="WaitControlBackground" aria-label="Loading..." role="dialog" tabindex="-1" style="display:none;position:absolute;">
+			<table height="100%" width="100%">
+				<tr>
+					<td><div class="spinnie">    <div class="dot dot1"></div>    <div class="dot dot2"></div>    <div class="dot dot3"></div>    <div class="dot dot4"></div>    <div class="dot dot5"></div></div></td><td class="WaitInfoCell"><span class="WaitText">Loading...</span><div class="CancelLinkDiv">
+						<a class="CancelLinkText" aria-label="Cancel" role="button" href="javascript:$get(&#39;PriceDistrict_AsyncWait&#39;).control._cancelCurrentPostback();">Cancel</a>
+					</div></td>
+				</tr>
+			</table>
+		</div><input type="hidden" name="PriceDistrict$AsyncWait$HiddenCancelField" id="PriceDistrict_AsyncWait_HiddenCancelField" value="False" /><table cellpadding="0" cellspacing="0" id="PriceDistrict_fixedTable">
+			<tr id="ParametersRowPriceDistrict">
+				<td colspan="3"><div id="PriceDistrict_ctl08" style="font-family:Verdana;font-size:8pt;">
+					<div onclick="if ($get(&#39;PriceDistrict_ctl08&#39;) != null &amp;&amp; $get(&#39;PriceDistrict_ctl08&#39;).control != null) $get(&#39;PriceDistrict_ctl08&#39;).control.HideActiveDropDown();" onactivate="if ($get(&#39;PriceDistrict_ctl08&#39;) != null &amp;&amp; $get(&#39;PriceDistrict_ctl08&#39;).control != null) $get(&#39;PriceDistrict_ctl08&#39;).control.HideActiveDropDown();">
+						<table cellpadding="0" cellspacing="0" width="100%" id="ParameterTable_PriceDistrict_ctl08" name="ParameterTable_PriceDistrict_ctl08" class="ParametersFrame ParamsGrid MenuBarBkGnd">
+							<tr>
+								<td width="100%" height="100%"><table id="ParametersGridPriceDistrict_ctl08">
+									<tr IsParameterRow="true">
+										<td class="ParamLabelCell"><label for="PriceDistrict_ctl08_ctl03_txtValue"><span style="font-family:Verdana;font-size:8pt;">date</span></label></td><td class="ParamEntryCell" style="padding-right:0px;"><div id="PriceDistrict_ctl08_ctl03" data-parameterName="date" style="font-family:Verdana;font-size:8pt;">
+											<div onactivate="event.cancelBubble=true;" style="white-space:nowrap;">
+												<table>
+													<tr>
+														<td><input name="PriceDistrict$ctl08$ctl03$txtValue" type="text" size="28" id="PriceDistrict_ctl08_ctl03_txtValue" disabled="disabled" class="aspNetDisabled DisabledTextBox" tabindex="1" style="font-family:Verdana;font-size:8pt;" /></td><td><button id="PriceDistrict_ctl08_ctl03_ctl01" class="chromeless-button glyphui glyphui-calendar" aria-label="date" aria-haspopup="true" tabindex="1"></button></td>
+													</tr>
+												</table>
+											</div>
+										</div></td><td class="InterParamPadding"></td>
+									</tr>
+								</table></td><td width="6px"></td><td class="SubmitButtonCell"><input type="submit" name="PriceDistrict$ctl08$ctl00" value="View Report" id="PriceDistrict_ctl08_ctl00" tabindex="1" class="SubmitButton" style="font-family:Verdana;font-size:8pt;" /></td>
+							</tr>
+						</table>
+					</div>
+				</div><iframe id="PriceDistrict_ctl08_ctl03_ctl02" Name="PriceDistrict_ctl08_ctl03_ctl02" longdesc="date date picker" frameBorder="0" onload="
+this.resultfield=$get(&#39;PriceDistrict_ctl08_ctl03_txtValue&#39;);
+this.resultfunc=function(resultField){$get(&#39;PriceDistrict_ctl08_ctl03&#39;).control.OnCalendarSelection(resultField);}" title="date date picker" onclick="event.cancelBubble=true;" style="display:none;position:absolute;z-index:10;" onactivate="event.cancelBubble=true;" scrolling="no" src="/Reserved.ReportViewerWebControl.axd?OpType=Calendar&amp;LCID=1033&amp;selectDate="></iframe></td>
+			</tr><tr style="height:6px;font-size:2pt;">
+				<td colspan="3" class="SplitterNormal" style="padding:0px;margin:0px;text-align:center;"><div id="PriceDistrict_ToggleParam">
+					<input type="image" name="PriceDistrict$ToggleParam$img" id="PriceDistrict_ToggleParam_img" title="Hide Parameters" tabindex="1" aria-live="polite" src="/Reserved.ReportViewerWebControl.axd?OpType=Resource&amp;Version=15.0.1404.0&amp;Name=Microsoft.Reporting.WebForms.Icons.SplitterHorizCollapse.png" alt="Hide Parameters" align="middle" onclick="void(0);" style="cursor:pointer;" /><input type="hidden" name="PriceDistrict$ToggleParam$store" id="PriceDistrict_ToggleParam_store" /><input type="hidden" name="PriceDistrict$ToggleParam$collapse" id="PriceDistrict_ToggleParam_collapse" value="false" />
+				</div></td>
+			</tr><tr style="display:none;">
+
+			</tr><tr>
+				<td style="vertical-align:top;display:none;"><div>
+					<div id="PriceDistrict_DocMap">
+						<div id="PriceDistrict_ctl12" style="display:none;">
+							<input type="hidden" name="PriceDistrict$ctl12$ClientClickedId" id="PriceDistrict_ctl12_ClientClickedId" />
+						</div>
+					</div>
+				</div></td><td class="SplitterNormal" style="display:none;width:4px;padding:0px;margin:0px;height:100%;vertical-align:middle;"><div id="PriceDistrict_ctl11">
+					<input type="image" name="PriceDistrict$ctl11$img" id="PriceDistrict_ctl11_img" title="Hide Document Map" tabindex="1" aria-live="polite" src="/Reserved.ReportViewerWebControl.axd?OpType=Resource&amp;Version=15.0.1404.0&amp;Name=Microsoft.Reporting.WebForms.Icons.SplitterVertCollapse.png" alt="Hide Document Map" align="top" onclick="void(0);" style="cursor:pointer;" /><input type="hidden" name="PriceDistrict$ctl11$store" id="PriceDistrict_ctl11_store" /><input type="hidden" name="PriceDistrict$ctl11$collapse" id="PriceDistrict_ctl11_collapse" value="false" />
+				</div></td><td style="vertical-align:top;"><div id="PriceDistrict_ctl13" tabindex="1" role="document" style="position:relative;">
+					<div id="VisibleReportContentPriceDistrict_ctl13" role="main" style="display:none;">
+
+					</div><div id="PriceDistrict_ctl13_ReportArea">
+						<div NewContentType="Microsoft.Reporting.WebFormsClient.ReportAreaContent.None" ForNonReportContentArea="false" id="PriceDistrict_ctl13_VisibilityState" style="visibility:none;">
+							<input type="hidden" name="PriceDistrict$ctl13$VisibilityState$ctl00" value="None" />
+						</div><input type="hidden" name="PriceDistrict$ctl13$ScrollPosition" id="PriceDistrict_ctl13_ScrollPosition" /><span id="PriceDistrict_ctl13_Reserved_AsyncLoadTarget"></span><div id="PriceDistrict_ctl13_ReportControl" style="display:none;">
+							<span></span><input type="hidden" name="PriceDistrict$ctl13$ReportControl$ctl02" /><input type="hidden" name="PriceDistrict$ctl13$ReportControl$ctl03" /><input type="hidden" name="PriceDistrict$ctl13$ReportControl$ctl04" id="PriceDistrict_ctl13_ReportControl_ctl04" value="100" />
+						</div><div id="PriceDistrict_ctl13_NonReportContent" style="height:100%;width:100%;">
+
+						</div>
+					</div>
+				</div></td>
+			</tr>
+		</table>
+	</div>
+</div>
+    
+    </div>
+    
+
+<script type="text/javascript">
+//<![CDATA[
+Sys.Application.add_init(function() {
+    
+if ((document.compatMode && document.compatMode == 'BackCompat') ||
+    (document.compatMode && document.compatMode == 'CSS1Compat' && document.documentMode && (document.documentMode <= 8 && document.documentMode > 0))) {
+    Sys.UI.DomElement.setVisible($get('PriceDistrict_BrowserNotSupportedErrorMessage'), true);
+    Sys.UI.DomElement.setVisible($get('PriceDistrict_fixedTable'), false);    
+} else if (typeof Microsoft == 'undefined' ||
+            typeof Microsoft.Reporting == 'undefined' ||
+            typeof Microsoft.Reporting.WebFormsClient == 'undefined' ||
+            typeof Microsoft.Reporting.WebFormsClient.ReportViewer == 'undefined') {
+    Sys.UI.DomElement.setVisible($get('PriceDistrict_HttpHandlerMissingErrorMessage'), true);
+    Sys.UI.DomElement.setVisible($get('PriceDistrict_fixedTable'), false);
+}
+    $create(Microsoft.Reporting.WebFormsClient.ReportViewer, {"_internalViewerId":"PriceDistrict_ctl03","id":"PriceDistrict"}, null, null);
+});
+Sys.WebForms.PageRequestManager.getInstance()._registerDisposeScript("PriceDistrict_ReportViewer", "$find(\u0027PriceDistrict_SessionKeepAlive\u0027).dispose();");
+Sys.Application.add_init(function() {
+    $create(Microsoft.Reporting.WebFormsClient._InternalReportViewer, {"ActionParamId":"PriceDistrict_ctl03_ctl01","ActionTypeId":"PriceDistrict_ctl03_ctl00","BaseHeight":"1200px","BaseWidth":"100%","BrowserModeId":"PriceDistrict_ctl15","DirectionCacheId":"PriceDistrict_ctl14","DocMapAreaId":"PriceDistrict_ctl12","DocMapHeaderOverflowDivId":"PriceDistrict_ctl12DocMapHeaderOverflowDiv","DocMapSplitterId":"PriceDistrict_ctl11","DocMapUpdatePanelId":"PriceDistrict_DocMap","FixedTableId":"PriceDistrict_fixedTable","HasSizingRow":false,"PostBackToClientScript":function(){__doPostBack('PriceDistrict$ctl03','');},"PromptAreaRowId":"ParametersRowPriceDistrict","PromptSplitterId":"PriceDistrict_ToggleParam","ReportAreaId":"PriceDistrict_ctl13","ReportViewerId":"PriceDistrict","TopLevelUpdatePanelId":"PriceDistrict_ReportViewer"}, null, null, $get("PriceDistrict_ctl03"));
+    $create(Microsoft.Reporting.WebFormsClient._SessionKeepAlive, {"KeepAliveBody":null,"KeepAliveIntervalSeconds":429,"KeepAliveUrl":"/Reserved.ReportViewerWebControl.axd?OpType=SessionKeepAlive\u0026ControlID=1aa9873dc20d49939f5335d228561e15\u0026RSProxy=http%3a%2f%2f192.168.1.3%2fReportServer","id":"PriceDistrict_SessionKeepAlive"}, null, null);
+});
+Sys.Application.add_init(function() {
+    $create(Microsoft.Reporting.WebFormsClient._AsyncWaitControl, {"ClientCanceledId":"PriceDistrict_AsyncWait_HiddenCancelField","DisplayDelay":1000,"FixedTableId":"PriceDistrict_fixedTable","ReportAreaId":"PriceDistrict_ctl13","ReportViewerId":"PriceDistrict","SkipTimer":true,"TriggerIds":["PriceDistrict"],"WaitControlId":"PriceDistrict_AsyncWait_Wait"}, null, null, $get("PriceDistrict_AsyncWait"));
+});
+Sys.Application.add_init(function() {
+    $create(Microsoft.Reporting.WebFormsClient._PromptArea, {"CredentialsLinkId":"PriceDistrict_ctl08_ctl01","ParameterIdList":["PriceDistrict_ctl08_ctl03"],"ParametersGridID":"ParametersGridPriceDistrict_ctl08","ReportViewerId":"PriceDistrict","ViewReportButtonId":"PriceDistrict_ctl08_ctl00"}, null, null, $get("PriceDistrict_ctl08"));
+});
+Sys.Application.add_init(function() {
+    $create(Microsoft.Reporting.WebFormsClient._CalendarDropDownParameterInputControl, {"BaseCalendarUrl":"/Reserved.ReportViewerWebControl.axd?OpType=Calendar\u0026LCID=1033\u0026selectDate=","CustomInputControlIdList":["PriceDistrict_ctl08_ctl03_ctl01","PriceDistrict_ctl08_ctl03_txtValue"],"FloatingIframeId":"PriceDistrict_ctl08_ctl03_ctl02","ImageId":"PriceDistrict_ctl08_ctl03_ctl01","NullValueText":"Null","ParentDivID":"PriceDistrict_ctl08","PostBackOnChange":false,"RelativeDivId":null,"TextBoxDisabledClass":"DisabledTextBox","TextBoxDisabledColor":"","TextBoxEnabledClass":null,"TextBoxId":"PriceDistrict_ctl08_ctl03_txtValue","TriggerPostBackScript":function(){__doPostBack('PriceDistrict$ctl08$ctl03','');},"ValidationMessage":"Please enter a value for the parameter \u0027date\u0027.  The parameter cannot be blank.","ValidatorIdList":[]}, null, null, $get("PriceDistrict_ctl08_ctl03"));
+});
+Sys.Application.add_init(function() {
+    $create(Microsoft.Reporting.WebFormsClient._Splitter, {"HoverStyle":"SplitterHover","ImageCollapse":"/Reserved.ReportViewerWebControl.axd?OpType=Resource\u0026Version=15.0.1404.0\u0026Name=Microsoft.Reporting.WebForms.Icons.SplitterHorizCollapse.png","ImageCollapseHover":"/Reserved.ReportViewerWebControl.axd?OpType=Resource\u0026Version=15.0.1404.0\u0026Name=Microsoft.Reporting.WebForms.Icons.SplitterHorizCollapseHover.png","ImageExpand":"/Reserved.ReportViewerWebControl.axd?OpType=Resource\u0026Version=15.0.1404.0\u0026Name=Microsoft.Reporting.WebForms.Icons.SplitterHorizExpand.png","ImageExpandHover":"/Reserved.ReportViewerWebControl.axd?OpType=Resource\u0026Version=15.0.1404.0\u0026Name=Microsoft.Reporting.WebForms.Icons.SplitterHorizExpandHover.png","ImageId":"PriceDistrict_ToggleParam_img","IsCollapsable":true,"NormalStyle":"SplitterNormal","Resizable":false,"StoreCollapseField":"PriceDistrict_ToggleParam_collapse","StorePositionField":"PriceDistrict_ToggleParam_store","TooltipCollapse":"Hide Parameters","TooltipExpand":"Show Parameters","Vertical":false}, null, null, $get("PriceDistrict_ToggleParam"));
+});
+Sys.Application.add_init(function() {
+    $create(Microsoft.Reporting.WebFormsClient._Splitter, {"HoverStyle":"SplitterHover","ImageCollapse":"/Reserved.ReportViewerWebControl.axd?OpType=Resource\u0026Version=15.0.1404.0\u0026Name=Microsoft.Reporting.WebForms.Icons.SplitterVertCollapse.png","ImageCollapseHover":"/Reserved.ReportViewerWebControl.axd?OpType=Resource\u0026Version=15.0.1404.0\u0026Name=Microsoft.Reporting.WebForms.Icons.SplitterVertCollapseHover.png","ImageExpand":"/Reserved.ReportViewerWebControl.axd?OpType=Resource\u0026Version=15.0.1404.0\u0026Name=Microsoft.Reporting.WebForms.Icons.SplitterVertExpand.png","ImageExpandHover":"/Reserved.ReportViewerWebControl.axd?OpType=Resource\u0026Version=15.0.1404.0\u0026Name=Microsoft.Reporting.WebForms.Icons.SplitterVertExpandHover.png","ImageId":"PriceDistrict_ctl11_img","IsCollapsable":true,"NormalStyle":"SplitterNormal","Resizable":false,"StoreCollapseField":"PriceDistrict_ctl11_collapse","StorePositionField":"PriceDistrict_ctl11_store","TooltipCollapse":"Hide Document Map","TooltipExpand":"Show Document Map","Vertical":true}, null, null, $get("PriceDistrict_ctl11"));
+});
+Sys.Application.add_init(function() {
+    $create(Microsoft.Reporting.WebFormsClient._ReportArea, {"NonReportContentId":"PriceDistrict_ctl13_NonReportContent","ReportAreaVisibilityStateId":"PriceDistrict_ctl13_VisibilityState","ReportControlId":"PriceDistrict_ctl13_ReportControl","ScrollPositionId":"PriceDistrict_ctl13_ScrollPosition","VisibleReportContentContainerId":"VisibleReportContentPriceDistrict_ctl13"}, null, null, $get("PriceDistrict_ctl13"));
+});
+Sys.Application.add_init(function() {
+    $create(Microsoft.Reporting.WebFormsClient._ReportPage, {"HiddenZoomLevelId":"PriceDistrict_ctl13_ReportControl_ctl04","StyleElementId":"PriceDistrict_ctl13_ReportControl_styles"}, null, null, $get("PriceDistrict_ctl13_ReportControl"));
+});
+//]]>
+</script>
+</form>
+</body>
+</html>

@@ -1,0 +1,64 @@
+Raw price rows: 55475
+Missing / non-positive prices removed: 10755
+Outliers vs own level: 32 | vs other cities (persistent): 491
+One-day glitches removed (others did not move): 64
+Stale runs (>= 10 identical prices): 323; confirmed not-updated (others moved) and repeated days removed: 38 runs / 621 rows; the rest stay, flagged is_stale = 1
+Rows dropped for missing weather: 0
+
+REMOVED total: 1208  ->  {'stale_repeat': 621, 'cross_city': 491, 'one_day_glitch': 64, 'own_median': 32}
+Train/val cut-offs: 2025-06-06 / 2026-02-27
+Spike thresholds (7-day-ahead change, first 70 % of dates):
+crop          variant       
+Garlic        Garlic (China)    10.9
+              Garlic (Local)    17.5
+Green Chilli  Green Chilli      31.2
+Onion         Onion             28.4
+Potato        Potato Fresh      17.4
+              Potato Store      10.7
+Tomato        Tomato            44.6
+
+FINAL observed-only file: 43512 rows | mandi_dataset.csv (with 1-2 day fills): 49252 rows
+Quality tiers (daily file): {'A': 39212, 'C': 5740, 'B': 4300}
+
+Spike share by split (observed): {'test': 0.055, 'train': 0.063, 'val': 0.035}
+
+BEFORE / AFTER (day-to-day change between consecutive real observations <= 3 days apart)
+v2: 36852 pairs | >30 %: 0.86 % | >50 %: 0.16 %    rows: 41831 (filled 11.0%, adjusted 2.2%, stale 9.1%)
+v3: 42968 pairs | >30 %: 0.66 % | >50 %: 0.10 %    rows: 43512 (filled 0 %, adjusted 0 %, stale 9.9%)
+
+                                        rows      first       last  stale_pct
+crop         variant        city                                             
+Garlic       Garlic (China) Faisalabad  1291 2022-01-01 2026-11-20       39.6
+                            Gujranwala  1103 2022-01-01 2026-11-20       16.1
+                            Lahore       962 2022-01-01 2026-07-01       16.1
+                            Multan      1207 2022-01-01 2026-11-20        6.3
+                            Rawalpindi  1443 2022-01-01 2026-11-20        4.4
+             Garlic (Local) Faisalabad  1306 2022-01-01 2026-11-20       36.1
+                            Gujranwala  1350 2022-01-01 2026-11-20       20.2
+                            Lahore      1595 2022-01-01 2026-11-20       19.6
+                            Multan      1215 2022-01-01 2026-11-20       13.5
+                            Rawalpindi  1591 2022-01-01 2026-11-20       11.9
+Green Chilli Green Chilli   Faisalabad  1540 2022-01-01 2026-11-20        7.6
+                            Gujranwala  1422 2022-01-01 2026-11-20        0.0
+                            Lahore      1463 2022-01-01 2026-11-20        6.0
+                            Multan      1511 2022-01-01 2026-11-20        0.0
+                            Rawalpindi  1578 2022-01-01 2026-11-20        2.0
+Onion        Onion          Faisalabad  1562 2022-01-01 2026-11-20        1.0
+                            Gujranwala  1480 2022-01-01 2026-11-20        6.6
+                            Lahore      1573 2022-01-01 2026-11-20        6.9
+                            Multan      1564 2022-01-01 2026-11-20        2.1
+                            Rawalpindi  1607 2022-01-01 2026-11-20        4.9
+Potato       Potato Fresh   Faisalabad  1134 2022-01-01 2026-11-20       16.7
+                            Gujranwala  1112 2022-01-01 2026-11-20       13.8
+                            Lahore      1207 2022-01-01 2026-06-19       24.8
+                            Multan      1168 2022-01-01 2026-11-20        5.4
+                            Rawalpindi  1186 2022-01-01 2026-11-20       15.9
+             Potato Store   Faisalabad   840 2022-06-02 2026-11-20       20.2
+                            Gujranwala   267 2022-06-04 2026-09-01       21.7
+                            Multan       328 2022-01-01 2025-10-20        0.0
+                            Rawalpindi   186 2025-06-15 2026-06-23       70.4
+Tomato       Tomato         Faisalabad  1572 2022-01-01 2026-11-20        0.8
+                            Gujranwala  1465 2022-01-01 2026-11-20        3.2
+                            Lahore      1590 2022-01-01 2026-11-20        1.6
+                            Multan      1493 2022-01-01 2026-11-20        0.0
+                            Rawalpindi  1601 2022-01-01 2026-11-20        0.0
