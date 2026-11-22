@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+*.bak
+.ipynb_checkpoints/
+.venv/
+.vscode/
+
+# regenerable investigation output (about 2 MB of saved web pages)
+data/probe/
+venv/

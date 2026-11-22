@@ -1,0 +1,77 @@
+======================================================================
+Phase 2 — Feature Engineering & Preprocessing
+======================================================================
+
+Loaded ml_ready.csv: 49,252 rows, 36 columns
+
+New features added: price_lag_7d, price_lag_14d, roll14_mean, season
+  price_lag_7d         populated: 47,508/49,252 (96.5%)
+  price_lag_14d        populated: 46,817/49,252 (95.1%)
+  roll14_mean          populated: 49,048/49,252 (99.6%)
+  season               values:    ['Autumn', 'Monsoon', 'Spring', 'Summer', 'Winter']
+
+  NOTE: Daily price spread (max − min) is not available.
+        AMIS publishes only ONE price per day.
+        roll7_std_pct (7-day rolling CV) is used as a substitute.
+
+──────────────────────────────────────────────────
+Model-ready rows (no NaN in any feature + target present)
+──────────────────────────────────────────────────
+  Classification (spike_7d):       44,163
+  Regression     (future_price_7d): 44,163
+    train  clf: 31,413  |  reg: 31,413
+    val    clf:  7,004  |  reg:  7,004
+    test   clf:  5,746  |  reg:  5,746
+
+Fitting preprocessor on 31,413 training rows (observed + filled, with targets)…
+  Numerical features:         29
+  Encoded categorical features: 18
+  Total preprocessed features:  47
+  Encoded categories: ['city_Gujranwala', 'city_Lahore', 'city_Multan', 'city_Rawalpindi', 'crop_Green Chilli', 'crop_Onion', 'crop_Potato', 'crop_Tomato', 'variant_Garlic (Local)', 'variant_Green Chilli', 'variant_Onion', 'variant_Potato Fresh', 'variant_Potato Store', 'variant_Tomato', 'season_Monsoon', 'season_Spring', 'season_Summer', 'season_Winter']
+
+  Preprocessor test: (5, 33) → (5, 47) ✓
+
+──────────────────────────────────────────────────
+Class balance (classification target: spike_7d)
+──────────────────────────────────────────────────
+  train: Normal=29,423 | Spike=1,990 | Ratio=14.8:1 | Spike rate=6.3%
+  val  : Normal=6,766 | Spike= 238 | Ratio=28.4:1 | Spike rate=3.4%
+  test : Normal=5,451 | Spike= 295 | Ratio=18.5:1 | Spike rate=5.1%
+  → Class imbalance detected. Use class_weight='balanced' in models.
+
+──────────────────────────────────────────────────
+Scaling summary (StandardScaler, fit on training data only)
+──────────────────────────────────────────────────
+  price_pkr_per_100kg             mean=  15926.9010  std=  14102.0622
+  price_lag_7d                    mean=  15907.3455  std=  14087.3203
+  price_lag_14d                   mean=  15879.7024  std=  14054.8550
+  pct_chg_1d                      mean=      0.0023  std=      0.0677
+  pct_chg_7d                      mean=      0.0156  std=      0.1770
+  pct_chg_14d                     mean=      0.0313  std=      0.2573
+  roll7_mean                      mean=  15917.7106  std=  14064.1020
+  roll14_mean                     mean=  15906.5620  std=  14024.0725
+  roll7_std_pct                   mean=      0.0556  std=      0.0509
+  vol_14d                         mean=      0.0547  std=      0.0402
+  price_vs_city_median            mean=      0.9928  std=      0.1059
+  rain_mm                         mean=      1.6164  std=      5.2916
+  rain_7d_mm                      mean=     11.1848  std=     19.8132
+  rain_14d_mm                     mean=     22.8521  std=     33.6516
+  days_since_rain                 mean=      9.9505  std=     10.3020
+  temp_max_c                      mean=     29.4509  std=      8.0018
+  temp_min_c                      mean=     17.3538  std=      7.8967
+  temp_mean_c                     mean=     22.9522  std=      8.0279
+  temp_mean_7d_c                  mean=     22.9075  std=      7.9456
+  heat_day                        mean=      0.0918  std=      0.2887
+  month                           mean=      6.1340  std=      3.5826
+  day_of_week                     mean=      3.0098  std=      1.9871
+  day_of_year                     mean=    171.4579  std=    109.4430
+  is_ramadan                      mean=      0.0976  std=      0.2968
+  days_to_next_eid                mean=     48.4239  std=     17.8865
+  days_since_last_eid             mean=     51.9908  std=     15.3021
+  is_pre_eid_10d                  mean=      0.0579  std=      0.2336
+  is_filled                       mean=      0.1336  std=      0.3402
+  is_stale                        mean=      0.0430  std=      0.2029
+
+✓ Wrote ml_featured.csv: 49,252 rows, 40 columns
+✓ Wrote models/preprocessor.joblib
+✓ Wrote models/feature_config.joblib

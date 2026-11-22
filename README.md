@@ -35,7 +35,7 @@ The previous version (v2) is kept untouched in `data/processed/archive_v2/` for 
 Run from the project root.
 
 ```bash
-pip install -r requirements.txt      # also install jupyter if you want to open the notebook
+pip install -r scripts/requirements.txt      # also install jupyter if you want to open the notebook
 python scripts/07_build_v3.py                # rebuilds the dataset from data/raw (no internet needed)
 # then open notebooks/EDA.ipynb and Run All
 ```

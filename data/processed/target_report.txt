@@ -1,0 +1,56 @@
+======================================================================
+Phase 2 — Target Variable Preparation
+======================================================================
+
+Loaded mandi_dataset.csv: 49252 rows, 35 columns
+
+Regression target (future_price_7d) populated: 47508/49252 rows (96.5%)
+
+Consistency check (future_price_7d / price - 1  vs  future_chg_7d):
+  Max absolute difference: 0.000050
+  Mean absolute difference: 0.00002038
+  ✓ Regression and classification targets are consistent.
+
+Spike threshold validation (train-only, observed-only, mean + 1.5×std):
+                             original  recomputed  match
+crop         variant                                    
+Garlic       Garlic (China)    0.1094    0.109424   True
+             Garlic (Local)    0.1747    0.174688   True
+Green Chilli Green Chilli      0.3121    0.312053   True
+Onion        Onion             0.2843    0.284260   True
+Potato       Potato Fresh      0.1745    0.174454   True
+             Potato Store      0.1074    0.107413   True
+Tomato       Tomato            0.4464    0.446365   True
+  ✓ All spike thresholds match: computed from training data only.
+
+Spike label validation (future_chg_7d > threshold):
+  Mismatched rows: 1 / 49252
+
+Date alignment sample (first 5 rows with future price):
+      date       city   crop        variant  price_pkr_per_100kg  future_price_7d  future_chg_7d  spike_7d
+2022-01-01 Faisalabad Garlic Garlic (China)              24750.0          25250.0         0.0202       0.0
+2022-01-02 Faisalabad Garlic Garlic (China)              24750.0          25250.0         0.0202       0.0
+2022-01-03 Faisalabad Garlic Garlic (China)              24750.0          25250.0         0.0202       0.0
+2022-01-04 Faisalabad Garlic Garlic (China)              25250.0          25250.0         0.0000       0.0
+2022-01-05 Faisalabad Garlic Garlic (China)              25250.0          25250.0         0.0000       0.0
+
+======================================================================
+TARGET SUMMARY
+======================================================================
+
+Classification target (spike_7d):
+  train:  33957 rows | Normal=31780 | Spike=2177 | Spike rate=6.4%
+  val  :   7396 rows | Normal= 7127 | Spike= 269 | Spike rate=3.6%
+  test :   6155 rows | Normal= 5811 | Spike= 344 | Spike rate=5.6%
+
+Regression target (future_price_7d):
+  train:  33957 rows | mean=   15799.1 | std=  14039.5 | min=  1100.0 | max=  71500.0
+  val  :   7396 rows | mean=   11590.2 | std=   9770.9 | min=  1100.0 | max=  53800.0
+  test :   6155 rows | mean=   14188.6 | std=  11524.8 | min=  1000.0 | max=  60500.0
+
+Rows with NaN targets (last 7 days of each series → no future price):
+  future_chg_7d  NaN: 1744
+  future_price_7d NaN: 1744
+  spike_7d       NaN: 1744
+
+✓ Wrote ml_ready.csv: 49252 rows, 36 columns

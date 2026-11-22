@@ -48,7 +48,7 @@ CROP_IDS = {   # crop -> [(AMIS name, id), ...]  FIRST variant = primary series,
 REQUEST_DELAY_SEC = 1.0          # polite pause between requests
 REQUEST_TIMEOUT_SEC = 30
 HEADERS = {
-    "User-Agent": "Mozilla/5.0 (university data-science project; contact: l252595@lhr.nu.edu.pk)"
+    "User-Agent": "Mozilla/5.0 (university data-science project; contact: l252580@lhr.nu.edu.pk)"
 }
 
 
