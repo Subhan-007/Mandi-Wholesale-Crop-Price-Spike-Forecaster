@@ -1,0 +1,65 @@
+================================================================================
+Phase 2 — Subtask 5: Model Evaluation, Comparison & Pipeline Finalization
+================================================================================
+
+1. CHRONOLOGICAL DATA SPLIT AUDIT
+--------------------------------------------------------------------------------
+Total model-ready rows: 44,163
+  • TRAIN set: 31,413 rows ( 71.1%) | Range: 2022-01-15 to 2025-06-06 | Spikes: 1,990 ( 6.3%)
+  • VAL   set:  7,004 rows ( 15.9%) | Range: 2025-06-07 to 2026-02-27 | Spikes:  238 ( 3.4%)
+  • TEST  set:  5,746 rows ( 13.0%) | Range: 2026-02-28 to 2026-11-13 | Spikes:  295 ( 5.1%)
+
+================================================================================
+2. CLASSIFICATION TASK EVALUATION (Predicting 7-Day Price Spikes)
+================================================================================
+
+Validation Split Performance (Used for Model Selection):
+              Model  Accuracy  Precision   Recall  F1-Score  ROC-AUC  TP   FP  FN   TN
+      Random Forest  0.881068   0.079208 0.235294  0.118519 0.689951  56  651 182 6115
+Logistic Regression  0.657910   0.053024 0.537815  0.096531 0.652529 128 2286 110 4480
+      Decision Tree  0.566676   0.041626 0.533613  0.077227 0.594658 127 2924 111 3842
+
+Test Split Performance (Unseen Generalization Assessment):
+              Model  Accuracy  Precision   Recall  F1-Score  ROC-AUC  TP   FP  FN   TN
+      Random Forest  0.897668   0.190275 0.305085  0.234375 0.716061  90  383 205 5068
+Logistic Regression  0.651236   0.092124 0.654237  0.161506 0.711324 193 1902 102 3549
+      Decision Tree  0.615733   0.074700 0.569492  0.132075 0.667746 168 2081 127 3370
+
+>>> Selected Best Classifier: RANDOM FOREST
+    Reason: Achieved top validation F1-score (0.1185) and test accuracy (89.8%) while suppressing false alarms.
+    ✓ Serialized best classifier pipeline to: models/classification_model.joblib
+
+================================================================================
+3. REGRESSION TASK EVALUATION (Predicting 7-Day Wholesale Price in PKR/100kg)
+================================================================================
+
+Validation Split Performance (Used for Model Selection):
+                  Model  MAE (PKR)  RMSE (PKR)  R² Score  MAPE (%)
+      Linear Regression 938.045304 1342.905210  0.981005  12.78266
+Random Forest Regressor 940.613694 1434.605479  0.978322  11.61278
+
+Test Split Performance (Unseen Generalization Assessment):
+                  Model   MAE (PKR)  RMSE (PKR)  R² Score  MAPE (%)
+      Linear Regression 1264.122017 1850.850895  0.973670 12.517436
+Random Forest Regressor 1319.671363 1959.629175  0.970484 13.094305
+
+>>> Selected Best Regressor: LINEAR REGRESSION
+    Reason: Lowest Validation RMSE (1342.9 PKR) and superior test generalizability (R²: 0.9737).
+    ✓ Serialized best regressor pipeline to: models/regression_model.joblib
+
+================================================================================
+4. GENERATING VISUAL COMPARISON CHARTS
+================================================================================
+  ✓ Saved figure: /run/media/qazi-rayyan/Linux Data/FAST/Python/IDS Project/Mandi Phase1_v3/eda_outputs/figures/11_classification_comparison.png
+  ✓ Saved figure: /run/media/qazi-rayyan/Linux Data/FAST/Python/IDS Project/Mandi Phase1_v3/eda_outputs/figures/12_regression_comparison.png
+
+================================================================================
+5. PRODUCTION DEPLOYMENT DELIVERABLES (Per Project Specification)
+================================================================================
+  1. Classification Pipeline: /run/media/qazi-rayyan/Linux Data/FAST/Python/IDS Project/Mandi Phase1_v3/models/classification_model.joblib
+     Model: Random Forest
+     Inputs: 33 raw features -> Encoded/Scaled to 47 features -> Classifier
+  2. Regression Pipeline:     /run/media/qazi-rayyan/Linux Data/FAST/Python/IDS Project/Mandi Phase1_v3/models/regression_model.joblib
+     Model: Linear Regression
+     Inputs: 33 raw features -> Encoded/Scaled to 47 features -> Regressor
+================================================================================
