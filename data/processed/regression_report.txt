@@ -1,0 +1,58 @@
+===========================================================================
+Phase 2 — Regression Model Development (7-Day Future Price Forecaster)
+===========================================================================
+
+Dataset loaded: 49,252 total rows
+Complete cases for regression: 44,163 rows
+Target variable: future_price_7d (PKR per 100 kg)
+Total input features: 33 (29 numerical, 4 categorical)
+  Train: 31,413 rows (2022-01-15 to 2025-06-06) | Mean Price=  15936.7 PKR | Min= 1700.0 | Max= 71500.0
+  Val  :  7,004 rows (2025-06-07 to 2026-02-27) | Mean Price=  11577.1 PKR | Min= 1100.0 | Max= 53800.0
+  Test :  5,746 rows (2026-02-28 to 2026-11-13) | Mean Price=  14247.3 PKR | Min= 1000.0 | Max= 60500.0
+
+===========================================================================
+Model Training & Evaluation
+===========================================================================
+
+>>> Training Linear Regression...
+    Saved models/reg_linear_regression.joblib
+    [TRAIN] MAE:   1376.0 PKR | RMSE:   2198.3 PKR | R²: 0.9757 | MAPE: 12.24%
+    [VAL  ] MAE:    938.0 PKR | RMSE:   1342.9 PKR | R²: 0.9810 | MAPE: 12.78%
+    [TEST ] MAE:   1264.1 PKR | RMSE:   1850.9 PKR | R²: 0.9737 | MAPE: 12.52%
+
+>>> Training Random Forest Regressor...
+    Saved models/reg_random_forest_regressor.joblib
+    [TRAIN] MAE:    585.7 PKR | RMSE:   1026.4 PKR | R²: 0.9947 | MAPE:  5.13%
+    [VAL  ] MAE:    940.6 PKR | RMSE:   1434.6 PKR | R²: 0.9783 | MAPE: 11.61%
+    [TEST ] MAE:   1319.7 PKR | RMSE:   1959.6 PKR | R²: 0.9705 | MAPE: 13.09%
+
+===========================================================================
+VALIDATION SET COMPARISON (Selection Set)
+===========================================================================
+                  model        mae        rmse       r2  mape_pct
+      Linear Regression 938.045304 1342.905210 0.981005  12.78266
+Random Forest Regressor 940.613694 1434.605479 0.978322  11.61278
+
+===========================================================================
+TEST SET PERFORMANCE (Final Holdout Evaluation)
+===========================================================================
+                  model         mae        rmse       r2  mape_pct
+      Linear Regression 1264.122017 1850.850895 0.973670 12.517436
+Random Forest Regressor 1319.671363 1959.629175 0.970484 13.094305
+
+===========================================================================
+SELECTED BEST REGRESSION MODEL: Linear Regression
+Validation RMSE: 1342.9 PKR | MAE: 938.0 PKR | R²: 0.9810
+===========================================================================
+
+✓ Saved best regression pipeline to: /run/media/qazi-rayyan/Linux Data/FAST/Python/IDS Project/Mandi Phase1_v3/models/regression_model.joblib
+
+Test Performance Breakdown by Crop (Selected Model):
+        Crop  Mean Price (PKR)  MAE (PKR)  RMSE (PKR)     R²  MAPE (%)
+      Garlic           24756.4     1208.7      1748.6 0.9833      5.60
+Green Chilli            9060.4      985.2      1212.2 0.5855     11.42
+       Onion           10913.8      979.9      1316.3 0.9348      9.97
+      Potato            2094.1      482.9       593.8 0.3885     24.40
+      Tomato           11897.7     2238.7      2961.6 0.7944     20.60
+
+✓ Saved evaluation metrics to: /run/media/qazi-rayyan/Linux Data/FAST/Python/IDS Project/Mandi Phase1_v3/data/processed/regression_metrics.csv
