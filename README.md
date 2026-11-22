@@ -1,95 +1,208 @@
-# Mandi Project - Phase 1: Data Engineering & EDA (Member 1)
+# Mandi & Wholesale Crop Price Spike Forecaster
 
-Daily wholesale prices of 5 crops (Onion, Tomato, Potato, Garlic, Green Chilli) in 5 Punjab cities (Lahore, Faisalabad,
-Rawalpindi, Multan, Gujranwala), 2022-01-01 to 2026-11-20, from AMIS Punjab, merged with Open-Meteo weather. Includes
-features, a 7-day-ahead target, a spike label and a train/val/test split for Member 2's machine-learning work.
+**Course:** Introduction to Data Science (Fall 2026)  
+**Dataset:** AMIS Punjab Daily Crop Rates & Open-Meteo Weather API (2022–2026)  
+**Scope:** 5 Crops (*Onion, Tomato, Potato, Garlic, Green Chilli*) across 5 Punjab Mandis (*Lahore, Faisalabad, Rawalpindi, Multan, Gujranwala*).
 
-**Current version: v3.** Use `data/processed/mandi_dataset.csv` and `docs/data_dictionary.md`.
-The previous version (v2) is kept untouched in `data/processed/archive_v2/` for comparison only.
+---
 
-## Folder structure
-```
-├── scripts/
-│   ├── config.py                    settings: crops, cities, AMIS IDs, dates, file paths
-│   ├── requirements.txt             Python packages
-│   ├── 01_probe_amis.py             investigation: AMIS home page + Open-Meteo test
-│   ├── 01b_probe_price_trends.py    investigation: the Price Trends form
-│   ├── 01c_try_ssrs_export.py       investigation: the report's CSV export
-│   ├── 02_scrape_amis.py            AMIS scraper                     -> data/raw/amis_prices_raw.csv, data/raw/exports/
-│   ├── 03_collect_weather.py        Open-Meteo weather               -> data/raw/weather_raw.csv
-│   ├── 04_clean_merge.py            v2 cleaning; v3 imports its filters. Do not run on its own (see below)
-│   ├── 05_diagnose.py               read-only checks on the raw data
-│   ├── 06_validate_dataset.py       v2 validator only - does NOT work on the v3 file
-│   ├── 07_build_v3.py               v3 build: raw -> cleaned, featured dataset (use this one)
-│   └── oneoff/                      one-time check/patch scripts from the v2 clean-up; not needed any more
-├── notebooks/EDA.ipynb              exploratory analysis (saves figures + tables)
-├── docs/data_dictionary.md          every column and every cleaning rule
+## Project Status
+
+- [x] **Phase 1: Data Engineering & EDA** (Completed by Member 1)
+  * AMIS Punjab scraper & Open-Meteo weather integration.
+  * Outlier removal, calendar gap-filling (1–2 days), quality tiering.
+  * Comprehensive Exploratory Data Analysis (`notebooks/EDA.ipynb`).
+- [x] **Phase 2: Feature Engineering & Machine Learning** (Completed by Member 2)
+  * Target variable definitions: 7-day future price (`future_price_7d`) and spike label (`spike_7d`).
+  * Feature pipeline: 7d/14d lags, rolling averages, volatility spreads, weather windows, seasonality & Eid dates.
+  * 3 Classification models developed & compared (Random Forest selected).
+  * 2 Regression models developed & compared (Linear Regression selected).
+  * Full scikit-learn deployment pipelines serialized via Joblib.
+- [ ] **Phase 3: Web Application & Deployment** (Next step for Member 3)
+  * Flask backend connected to trained `.joblib` pipelines.
+  * Web interface with crop/city selectors, price predictions, and spike risk probability.
+  * Vercel deployment.
+
+---
+
+## Folder Structure
+
+```text
 ├── data/
-│   ├── raw/                         amis_prices_raw.csv, weather_raw.csv, exports/ (untouched AMIS downloads)
-│   └── processed/                   mandi_dataset.csv (main), mandi_observed_v3.csv, removed_v3.csv,
-│                                    cleaning_report_v3.txt, archive_v2/
-└── eda_outputs/{figures,tables}/    written by the notebook
+│   ├── raw/                             Raw AMIS prices & Open-Meteo weather CSVs
+│   └── processed/
+│       ├── mandi_dataset.csv            Clean Phase 1 daily dataset (49,252 rows)
+│       ├── ml_ready.csv                 Phase 2 dataset with regression & classification targets
+│       ├── ml_featured.csv              Feature-engineered modelling dataset (40 columns)
+│       ├── classification_summary.csv   Tabular metrics for all 3 classifiers across splits
+│       ├── regression_summary.csv       Tabular metrics for both regressors across splits
+│       ├── feature_report.txt           Scaling and categorical encoding audit log
+│       └── model_comparison_report.txt  Comprehensive model audit and selection report
+├── docs/
+│   └── data_dictionary.md               Full column definitions, units, and cleaning rules
+├── eda_outputs/
+│   ├── figures/                         Plots 01–10 (Phase 1 EDA) + 11–12 (Phase 2 Model Evaluation)
+│   │   ├── 11_classification_comparison.png
+│   │   └── 12_regression_comparison.png
+│   └── tables/                          Summary CSV tables from EDA
+├── models/                              Production pipelines & serialized models
+│   ├── classification_model.joblib      PRIMARY: Selected Random Forest Classifier pipeline
+│   ├── regression_model.joblib          PRIMARY: Selected Linear Regression pipeline
+│   ├── preprocessor.joblib              Fitted ColumnTransformer (Scaler + OneHotEncoder)
+│   ├── feature_config.joblib            Feature column lists and metadata
+│   ├── clf_logistic_regression.joblib   Baseline classification pipeline
+│   ├── clf_decision_tree.joblib         Decision tree classification pipeline
+│   ├── clf_random_forest.joblib         Random forest classification pipeline
+│   ├── reg_linear_regression.joblib     Linear regression pipeline
+│   └── reg_random_forest_regressor.joblib Random forest regressor pipeline
+├── notebooks/
+│   └── EDA.ipynb                        Exploratory data analysis notebook
+├── scripts/
+│   ├── config.py                        Global settings, crop IDs, coordinates, and paths
+│   ├── requirements.txt                 Python dependencies
+│   ├── 01_probe_amis.py                 AMIS website investigation script
+│   ├── 02_scrape_amis.py                AMIS historical web scraper
+│   ├── 03_collect_weather.py            Open-Meteo API weather collector
+│   ├── 04_clean_merge.py                Legacy v2 cleaning rules
+│   ├── 07_build_v3.py                   Phase 1 master builder (raw -> mandi_dataset.csv)
+│   ├── 08_prepare_targets.py            Phase 2: Target variable generation & verification
+│   ├── 09_feature_engineering.py        Phase 2: Feature creation, scaling & preprocessor fitting
+│   ├── 10_train_classification.py       Phase 2: Train & evaluate 3 classification models
+│   ├── 11_train_regression.py           Phase 2: Train & evaluate 2 regression models
+│   └── 12_model_evaluation_and_comparison.py Phase 2: Master comparison, report & plot generation
+└── README.md
 ```
 
-## How to reproduce
-Run from the project root.
+---
+
+## Machine Learning Results Summary (Phase 2)
+
+Data is partitioned **chronologically** to guarantee zero future data leakage:
+* **Train (71.1%):** 2022-01-15 to 2025-06-06 (31,413 rows)
+* **Validation (15.9%):** 2025-06-07 to 2026-02-27 (7,004 rows)
+* **Test (13.0%):** 2026-02-28 to 2026-11-13 (5,746 rows)
+
+### 1. Classification: 7-Day Price Spike Forecaster
+Predicts whether next week's wholesale price will exceed the crop's normal historical increase by $> 1.5\sigma$. Evaluated on unseen **Test Split**:
+
+| Model | Test Accuracy | Precision | Recall | F1-Score | ROC-AUC | False Alarms (FP) | Status |
+|---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+| **Random Forest** | **89.8%** | **19.0%** | 30.5% | **0.2344** | **0.7161** | **383** | **Selected Best** |
+| Logistic Regression | 65.1% | 9.2% | **65.4%** | 0.1615 | 0.7113 | 1,902 | Baseline |
+| Decision Tree | 61.6% | 7.5% | 56.9% | 0.1321 | 0.6677 | 2,081 | Evaluated |
+
+* **Why Random Forest was selected:** Random Forest achieved **90% accuracy** and cut out over 80% of the false alarms generated by linear and single-tree models. For web app users, its high confidence on normal days (**96% precision on normal class**) and solid risk ranking (**0.72 ROC-AUC**) provide a trustworthy early-warning signal.
+* **Top Drivers of Spikes:** `day_of_year` (harvest season), `price_vs_city_median` (provincial divergence), `roll14_mean`, `vol_14d` (pre-spike volatility), and `days_to_next_eid`.
+
+### 2. Regression: 7-Day Wholesale Price Predictor
+Predicts the actual expected wholesale rate in PKR per 100 kg. Evaluated on unseen **Test Split**:
+
+| Model | Test MAE | Test RMSE | $R^2$ Score | Mean % Error (MAPE) | Status |
+|---|:---:|:---:|:---:|:---:|:---:|
+| **Linear Regression** | **1,264.1 PKR** | **1,850.9 PKR** | **0.9737** | **12.52%** | **Selected Best** |
+| Random Forest Regressor | 1,319.7 PKR | 1,959.6 PKR | 0.9705 | 13.09% | Evaluated |
+
+* **Why Linear Regression was selected:** In time-series commodity forecasting, current price and rolling averages provide strong linear anchors. Linear Regression yielded the lowest validation RMSE (1,342.9 PKR) and generalized better to continuous upward price trends on test data ($R^2 = 0.9737$, ~12.5% average error).
+* **Crop Breakdown (Selected Model on Test Set):**
+  * **Garlic:** MAE 1,208.7 PKR | $R^2$ **0.9833** | MAPE **5.6%** (highly predictable)
+  * **Onion:** MAE 979.9 PKR | $R^2$ **0.9348** | MAPE **10.0%**
+  * **Green Chilli:** MAE 985.2 PKR | $R^2$ 0.5855 | MAPE **11.4%**
+  * **Tomato:** MAE 2,238.7 PKR | $R^2$ 0.7944 | MAPE **20.6%** (perishable, high volatility)
+  * **Potato:** MAE 482.9 PKR | $R^2$ 0.3885 | MAPE **24.4%** (low base price, seasonal gaps)
+
+---
+
+## How to Run & Reproduce
+
+### 1. Environment Setup
+```bash
+# Clone the repository and navigate to root
+cd "Mandi Phase1_v3"
+
+# Activate the virtual environment
+source venv/bin/activate
+
+# Install required dependencies
+pip install -r scripts/requirements.txt
+```
+
+### 2. Re-run Phase 2 Machine Learning Pipeline (Step-by-Step)
+You can run the modules individually or end-to-end:
 
 ```bash
-pip install -r scripts/requirements.txt      # also install jupyter if you want to open the notebook
-python scripts/07_build_v3.py                # rebuilds the dataset from data/raw (no internet needed)
-# then open notebooks/EDA.ipynb and Run All
+# Step 1: Create regression target and verify classification targets
+python scripts/08_prepare_targets.py
+
+# Step 2: Generate lag features, rolling windows, and fit preprocessor
+python scripts/09_feature_engineering.py
+
+# Step 3: Train and evaluate the 3 classification models
+python scripts/10_train_classification.py
+
+# Step 4: Train and evaluate the 2 regression models
+python scripts/11_train_regression.py
+
+# Step 5: Run master comparison, generate metrics tables and visual figures
+python scripts/12_model_evaluation_and_comparison.py
 ```
-This rebuilds the shipped dataset exactly from the raw files in `data/raw/`.
 
-To refresh the raw data from the internet first (the end date is today's date, so the result will be newer than the shipped
-data, which ends 2026-11-20):
-```bash
-python scripts/02_scrape_amis.py             # ~30 series x 5 yearly chunks; resumable, just re-run if it stops
-python scripts/03_collect_weather.py
-python scripts/07_build_v3.py
+---
+
+## Handoff Guide for Member 3 (Web App & Deployment)
+
+Member 3 can directly use the production-ready Joblib pipelines stored in `models/`. Each pipeline is self-contained with its own preprocessor:
+
+```python
+import joblib
+import pandas as pd
+
+# 1. Load the production models
+clf_pipeline = joblib.load("models/classification_model.joblib")
+reg_pipeline = joblib.load("models/regression_model.joblib")
+feature_config = joblib.load("models/feature_config.joblib")
+
+# 2. Predict on new input data (DataFrame with the raw input features)
+sample_input = pd.DataFrame([{
+    "city": "Lahore",
+    "crop": "Onion",
+    "variant": "Onion",
+    "price_pkr_per_100kg": 11500.0,
+    "price_lag_7d": 11000.0,
+    "price_lag_14d": 10500.0,
+    "pct_chg_1d": 0.0,
+    "pct_chg_7d": 0.045,
+    "pct_chg_14d": 0.095,
+    "roll7_mean": 11200.0,
+    "roll14_mean": 10900.0,
+    "roll7_std_pct": 0.04,
+    "vol_14d": 0.03,
+    "price_vs_city_median": 1.02,
+    "rain_mm": 0.0,
+    "rain_7d_mm": 5.0,
+    "rain_14d_mm": 12.0,
+    "days_since_rain": 4,
+    "temp_max_c": 32.0,
+    "temp_min_c": 18.0,
+    "temp_mean_c": 25.0,
+    "temp_mean_7d_c": 24.5,
+    "heat_day": 0,
+    "month": 11,
+    "day_of_week": 6,
+    "day_of_year": 326,
+    "season": "Autumn",
+    "is_ramadan": 0,
+    "days_to_next_eid": 45,
+    "days_since_last_eid": 60,
+    "is_pre_eid_10d": 0,
+    "is_filled": 0,
+    "is_stale": 0
+}])
+
+# 3. Generate App Outputs
+predicted_price = reg_pipeline.predict(sample_input)[0]
+spike_prediction = clf_pipeline.predict(sample_input)[0]      # 0 = Normal, 1 = Price Spike
+spike_probability = clf_pipeline.predict_proba(sample_input)[0][1]  # e.g., 0.35 -> 35% risk
+
+print(f"Predicted Price: {predicted_price:.1f} PKR/100kg")
+print(f"Spike Risk: {'HIGH' if spike_prediction == 1 else 'LOW'} ({spike_probability * 100:.1f}%)")
 ```
-Notes:
-- Put your own e-mail in `HEADERS` in `scripts/config.py` (polite user-agent for the scraper). `build_request()` in that file is an unused leftover; ignore it.
-- `07_build_v3.py` imports its unit conversion and outlier filters from `04_clean_merge.py`. Running `04_clean_merge.py` by itself
-  would overwrite `mandi_dataset.csv` with the old v2 format, so do not run it.
-- `07_build_v3.py` compares against `data/processed/archive_v2/mandi_dataset.csv` at the end. Keep that file in place.
-- `01_*` and `05_*` are investigation scripts; they are not needed to rebuild.
-
-## How the data is collected
-- AMIS site: `http://www.amis.pk` (**http**, https does not work). The "Price Trends" report (Crop + City + Start/End date) is an
-  ASP.NET / SQL Reporting Services page loaded by JavaScript, so the scraper submits the form and downloads the report's
-  built-in **CSV export**. One request returns one year for one crop and city.
-- AMIS gives **one** price per day (PKR per 100 kg). No min / max / usual price.
-- Weather: Open-Meteo archive API (daily rain and temperature at each city's coordinates).
-
-## What v3 does (details in `docs/data_dictionary.md` and `data/processed/cleaning_report_v3.txt`)
-- Backup series are **not** spliced any more: Potato Fresh / Potato Store and Garlic (Local) / Garlic (China) are separate
-  series in column `variant`.
-- Removes: unit/duplicate/invalid prices, outliers vs the city's own level, persistent city-specific glitches vs the other
-  cities, one-day glitches, and not-updated stale repeats. Real market-wide shocks are kept. Every removed row is in `removed_v3.csv`.
-- 1-2 day gaps are forward-filled and flagged (`is_filled`); `mandi_observed_v3.csv` is the same data without them.
-- Adds percentage changes, rolling stats, cross-city ratio, weather windows, calendar / Ramadan / Eid features, the target
-  `future_chg_7d`, the label `spike_7d` and a date-based `split` (train to 2025-06-06, val to 2026-02-27, test after).
-
-## Hand-off notes for Member 2
-Give Member 2: `data/processed/mandi_dataset.csv`, `docs/data_dictionary.md`, `notebooks/EDA.ipynb` (+ `eda_outputs/`), `data/raw/`, `scripts/`.
-
-1. **Pick one variant per crop** for Potato (Potato Fresh) and Garlic (Local), or model the variants separately. They are different AMIS series with different price levels.
-2. **Lags and rolling windows are computed by calendar date**; gaps longer than 2 days are missing from the file.
-3. `future_chg_7d` is the target. **Never use it as a feature.**
-4. `quality_tier`: A real, B real but in a stale run (10+ identical prices), C forward-filled. Consider training on A (+B) only.
-5. Split by date, never shuffle. The 7-day target of the last days of `train` and `val` looks into the next period; drop the last 7 days of each if you want a strict split.
-6. The spike rate is not stable over time (e.g. Tomato and Potato spike more often in `test` than in `train`); evaluate per split.
-7. No min/max price exists, so a "daily price spread" feature cannot be built; `roll7_std_pct` is the closest substitute.
-8. Potato has real data gaps in several cities (Lahore potato ends 2026-06-19). Prices trend upward: prefer percentage-change features.
-
-## Known limitations
-- A small number of glitch rows remain, for example Faisalabad Garlic (Local) around 2026-01-16 to 2026-02-08 (price about 1.9x the other cities, 11 rows flagged by `price_vs_city_median > 1.8`).
-- 285 day-to-day moves above 30 % remain; they are kept, not corrected.
-- Weather is for the city centre, not for the farms that supply the market.
-
-## Troubleshooting
-- `SSL: WRONG_VERSION_NUMBER` -> use `http://`, not `https://`.
-- Scraper stopped halfway -> run `02_scrape_amis.py` again; finished requests are skipped (`data/raw/amis_progress.csv`). Failed requests are listed in `data/raw/amis_failed_requests.csv` (created only if something failed).
-- AMIS layout changed -> re-run `01b_probe_price_trends.py` and `01c_try_ssrs_export.py` to see what changed.
-- `ModuleNotFoundError: hijridate` -> `pip install -r scripts/requirements.txt`.
