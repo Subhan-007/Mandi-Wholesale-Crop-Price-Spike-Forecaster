@@ -1,0 +1,85 @@
+===========================================================================
+Phase 2 — Classification Model Development (Price Spike Forecaster)
+===========================================================================
+
+Dataset loaded: 49,252 total rows
+Complete cases for classification: 44,163 rows
+Total input features: 33 (29 numerical, 4 categorical)
+  Train: 31,413 rows (2022-01-15 to 2025-06-06) | Normal=29,423 | Spike=1,990 (6.3%)
+  Val  :  7,004 rows (2025-06-07 to 2026-02-27) | Normal=6,766 | Spike= 238 (3.4%)
+  Test :  5,746 rows (2026-02-28 to 2026-11-13) | Normal=5,451 | Spike= 295 (5.1%)
+
+===========================================================================
+Model Training & Evaluation
+===========================================================================
+
+>>> Training Logistic Regression...
+    Saved models/clf_logistic_regression.joblib
+    [TRAIN] Acc: 0.6482 | Prec: 0.1121 | Rec: 0.6578 | F1: 0.1915 | ROC-AUC: 0.7117 | CM: TN=19,054  FP=10,369 | FN= 681  TP=1,309
+    [VAL  ] Acc: 0.6579 | Prec: 0.0530 | Rec: 0.5378 | F1: 0.0965 | ROC-AUC: 0.6525 | CM: TN=4,480  FP=2,286 | FN= 110  TP= 128
+    [TEST ] Acc: 0.6512 | Prec: 0.0921 | Rec: 0.6542 | F1: 0.1615 | ROC-AUC: 0.7113 | CM: TN=3,549  FP=1,902 | FN= 102  TP= 193
+
+>>> Training Decision Tree...
+    Saved models/clf_decision_tree.joblib
+    [TRAIN] Acc: 0.6681 | Prec: 0.1369 | Rec: 0.7990 | F1: 0.2337 | ROC-AUC: 0.8054 | CM: TN=19,398  FP=10,025 | FN= 400  TP=1,590
+    [VAL  ] Acc: 0.5667 | Prec: 0.0416 | Rec: 0.5336 | F1: 0.0772 | ROC-AUC: 0.5947 | CM: TN=3,842  FP=2,924 | FN= 111  TP= 127
+    [TEST ] Acc: 0.6157 | Prec: 0.0747 | Rec: 0.5695 | F1: 0.1321 | ROC-AUC: 0.6677 | CM: TN=3,370  FP=2,081 | FN= 127  TP= 168
+
+>>> Training Random Forest...
+    Saved models/clf_random_forest.joblib
+    [TRAIN] Acc: 0.9280 | Prec: 0.4674 | Rec: 0.9819 | F1: 0.6333 | ROC-AUC: 0.9921 | CM: TN=27,196  FP=2,227 | FN=  36  TP=1,954
+    [VAL  ] Acc: 0.8811 | Prec: 0.0792 | Rec: 0.2353 | F1: 0.1185 | ROC-AUC: 0.6900 | CM: TN=6,115  FP= 651 | FN= 182  TP=  56
+    [TEST ] Acc: 0.8977 | Prec: 0.1903 | Rec: 0.3051 | F1: 0.2344 | ROC-AUC: 0.7161 | CM: TN=5,068  FP= 383 | FN= 205  TP=  90
+
+===========================================================================
+VALIDATION SET COMPARISON (Selection Set)
+===========================================================================
+              model  accuracy  precision   recall       f1  roc_auc  tp   fp  fn   tn
+      Random Forest  0.881068   0.079208 0.235294 0.118519 0.689951  56  651 182 6115
+Logistic Regression  0.657910   0.053024 0.537815 0.096531 0.652529 128 2286 110 4480
+      Decision Tree  0.566676   0.041626 0.533613 0.077227 0.594658 127 2924 111 3842
+
+===========================================================================
+TEST SET PERFORMANCE (Final Evaluation)
+===========================================================================
+              model  accuracy  precision   recall       f1  roc_auc  tp   fp  fn   tn
+      Random Forest  0.897668   0.190275 0.305085 0.234375 0.716061  90  383 205 5068
+Logistic Regression  0.651236   0.092124 0.654237 0.161506 0.711324 193 1902 102 3549
+      Decision Tree  0.615733   0.074700 0.569492 0.132075 0.667746 168 2081 127 3370
+
+===========================================================================
+SELECTED BEST MODEL: Random Forest
+Validation F1-score: 0.1185 (Recall: 0.2353, Precision: 0.0792)
+===========================================================================
+
+✓ Saved best classification pipeline to: /run/media/qazi-rayyan/Linux Data/FAST/Python/IDS Project/Mandi Phase1_v3/models/classification_model.joblib
+
+Final Test Classification Report (Selected Model):
+                 precision    recall  f1-score   support
+
+     Normal (0)       0.96      0.93      0.95      5451
+Price Spike (1)       0.19      0.31      0.23       295
+
+       accuracy                           0.90      5746
+      macro avg       0.58      0.62      0.59      5746
+   weighted avg       0.92      0.90      0.91      5746
+
+
+Top 15 Most Important Features in Selected Model:
+day_of_year             0.0747
+price_vs_city_median    0.0653
+price_pkr_per_100kg     0.0652
+roll14_mean             0.0631
+roll7_mean              0.0602
+price_lag_14d           0.0525
+vol_14d                 0.0504
+price_lag_7d            0.0477
+temp_mean_7d_c          0.0466
+pct_chg_14d             0.0424
+temp_min_c              0.0349
+roll7_std_pct           0.0344
+pct_chg_7d              0.0327
+temp_mean_c             0.0325
+days_to_next_eid        0.0308
+
+✓ Saved evaluation metrics to: /run/media/qazi-rayyan/Linux Data/FAST/Python/IDS Project/Mandi Phase1_v3/data/processed/classification_metrics.csv
