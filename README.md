@@ -123,7 +123,7 @@ cd "Mandi Phase1_v3"
 source venv/bin/activate
 
 # Install required dependencies
-pip install -r scripts/requirements.txt
+pip install -r requirements.txt
 ```
 
 ### 2. Re-run Phase 2 Machine Learning Pipeline (Step-by-Step)
